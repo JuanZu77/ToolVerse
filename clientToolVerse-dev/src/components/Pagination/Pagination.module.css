@@ -2,10 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0 1rem 0; 
   background-color: var(--secondary);
-  padding: 10px;
+  padding: 1.7rem;
 }
 
 .divButtons button {
@@ -13,30 +12,49 @@
   font-size: 1.3rem;
   font-weight: bold;
   border: none;
-  border-radius: 3rem;
+  border-radius: 0.5rem;
 }
 
 .button {
   display: inline-block;
   padding: 1rem 1.2rem;
-  background-color: var(--buttons);
-  color: var(--primary);
+  background-color: rgb(245, 232, 232);
+  color: gray;
   font-size: 1.3rem;
   font-weight: bold;
   border: none;
-  border-radius: 0.2rem;
   cursor: pointer;
   transition: background-color 0.1s ease;
   margin: 0 2px;
 }
 
+.buttonActual{
+  transform: scale(1.2);
+  background-color: var(--buttons);
+  color: var(--primary);
+}
+
 .button:hover {
-  background-color: var(--highlights);
-  color:var(--buttons);
-  font-size: 1.3rem;
+  background-color: var(--buttons);
+  color:var(--primary);
+  font-size: 1.rem;
   font-weight: bold;
   border: none;
-  border-radius: 3rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+/*Anterior y Siguiente*/
+.AnteriorSiguiente {
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--buttons);
+}
+
+.AnteriorSiguiente:disabled {
+  cursor: not-allowed;
+  color: transparent;
 }
 
 .button:disabled {
@@ -48,7 +66,9 @@
   border-radius: 3rem;
 }
 
-.button.active {
-  background-color: #b1b5b2;
+.button:active {
+  background-color: white;
+  padding: 1rem 1.2rem;
   color: #000000;
+  cursor: pointer;
 }
