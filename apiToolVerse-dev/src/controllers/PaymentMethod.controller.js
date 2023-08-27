@@ -47,7 +47,6 @@ const createPaymentMethod = async (req, res) => {
     }
   };
 
-
   module.exports={
     getAllPaymentMethod,
     getPaymentMethodById,

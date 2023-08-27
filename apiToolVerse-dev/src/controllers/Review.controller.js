@@ -19,7 +19,6 @@ const getReviewById=async(req,res)=>{
     }
 }
 
-
 const createReview = async (req, res) => {
     try {
       const { userId, productId, score, comments } = req.body;

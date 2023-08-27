@@ -101,36 +101,6 @@ StockMovement.belongsTo(Product);
 Product.hasMany(Category)
 Category.belongsTo(Product)
 
-// User.login=(email,password)=>{
-//    //Buscar usuario bueno no puede ser mas chico xd
-//    return User.findOne({
-//      where:{
-//        email
-//      }
-//    }).then(user=>{
-//      if(!user)return null
-//      return user.authenticatePassword(password).then(valid=>valid?user:null)
-//    })
-//  }
-//  User.prototype.authenticatePassword = function(password){
-//      return new Promise((res,rej)=>{
-//        bcrypt.compare(password,this.password_hash,function(err,valid){
-//          if(err) return rej(err)
-//          res(valid)
-//        })
-//      })
-//  }
-
-// User.beforeCreate((user,options)=>{
-//    return new Promise((resolve,reject)=>{
-//       if(user.password){
-//          bcrypt.hash(user.password,10,(error,hash)=>{
-//             user.password_hash = hash;
-//             resolve()
-//          })
-//       }
-//    })
-// })
 module.exports = {
    ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
    conn: sequelize, // para importart la conexión { conn } = require('./db.js');

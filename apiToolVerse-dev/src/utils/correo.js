@@ -14,8 +14,6 @@ const transport = nodemailer.createTransport({
     }
 })
 
-
-
-  module.exports={
+module.exports={
     transport
   }

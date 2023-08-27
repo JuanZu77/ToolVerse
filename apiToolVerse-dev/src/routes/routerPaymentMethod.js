@@ -7,5 +7,4 @@ router.route('/paymentMethod').get(getAllPaymentMethod).post(createPaymentMethod
 
 router.route('/paymentMethod/:id').get(getPaymentMethodById)
 
-
 module.exports=router

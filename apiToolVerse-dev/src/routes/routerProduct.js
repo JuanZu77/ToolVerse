@@ -1,12 +1,7 @@
 const { Router } = require('express');
 const {getAllProducts, getProductById, getProductByName, createProducts, updateProduct, deleteProduct} =require("../controllers/Product.controller");
 
-
 const router = Router();
-
-/* ----------------------------------- */
-/* Products                         */
-/* ----------------------------------- */
 
 router.get("/products", (req, res) => {
     if(req.query.name) getProductByName(req, res)

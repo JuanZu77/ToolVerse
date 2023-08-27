@@ -117,7 +117,6 @@ const getPurchaseDetailByPurchaseCartId = async (req, res) => {
   }
 }
 
-
 const updatePurchaseDetail = async (req, res) => {
   try {
     const { id } = req.params;
@@ -158,7 +157,6 @@ const updatePurchaseDetail = async (req, res) => {
     res.status(500).json({ error: 'Error updating Purchase Detail' });
   }
 };
-
 
 module.exports = {
   getAllPurchaseDetail,

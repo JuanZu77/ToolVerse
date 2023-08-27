@@ -5,7 +5,6 @@ mercadopago.configure({access_token: process.env.PROD_ACCESS_TOKEN})
 const createPayment = (req, res) => {
 const tool = req.body;
 
-
 // Crea un objeto de preferencia
 let preference = {
     items: [],

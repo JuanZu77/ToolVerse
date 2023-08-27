@@ -13,7 +13,6 @@ const routerPurchaseDetail=require('./routerPurchaseDetail')
 const routerMercadoPago=require('./routerMercadoPago')
 const routerCategory=require("./routeCategory")
 
-
 const router = Router();
 
 router.use(routerAuth)
@@ -29,7 +28,5 @@ router.use(routerUser)
 router.use(routerPurchaseDetail)
 router.use(routerMercadoPago)
 router.use(routerCategory)
-
-
 
 module.exports = router;
