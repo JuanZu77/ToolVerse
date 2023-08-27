@@ -1,0 +1,44 @@
+.searchBar {
+    border: 0.1rem solid var(--highlights);
+    border-radius: 0.4rem;
+    display: flex;
+    align-items: center;
+    margin-left: 4rem;
+    width: 25%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.input,
+.lupa,
+.onSearch,
+.ex {
+    border: none;
+    background-color: transparent;
+}
+
+.lupa,
+.ex {
+    width: 2.5rem;
+    cursor: pointer;
+}
+
+.input {
+    width: 29rem;
+    font-size: medium;
+}
+
+.ex {
+    margin-left: -0.8rem;
+}
+
+@media (max-width: 480px) {
+
+    .searchBar {
+        width: 23rem;
+    }
+
+    .input {
+        width: 19.4rem;
+    }
+}

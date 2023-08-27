@@ -1,0 +1,22 @@
+.save {
+  background: linear-gradient(360deg, rgba(2, 94, 255, 1) 0%, rgba(2, 117, 255, 1) 28%, rgba(2, 141, 255, 1) 60%, rgba(2, 200, 255, 1) 100%);
+    font-size: 16px;
+    width: fit-content;
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 25px;
+  align-self: center;
+  font-weight: bold;
+}
+
+.save:hover {
+      background: linear-gradient(360deg, rgb(2, 134, 255) 0%, rgb(2, 157, 255) 28%, rgba(2, 181, 255, 1) 60%, rgba(2, 240, 255, 1) 100%);
+      
+      font-weight: bold;
+    }
+  

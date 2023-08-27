@@ -1,0 +1,45 @@
+.title {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    margin-top: 0.1rem;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+}
+
+.table th,
+.table td {
+    padding: 0.8rem;
+    border: 1px solid gainsboro;
+    font-size: medium;
+}
+
+.table th {
+    background-color: gainsboro;
+    font-weight: bold;
+}
+
+.button {
+    height: 4.5rem;
+    margin: 1rem;
+}
+
+.button input {
+    height: 100%;
+    max-width: 15%;
+    border-radius: 0.5rem;
+    border: none;
+    color: #fff;
+    font-size: medium;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #acadad, #515755);
+}
+
+.button input:hover {
+    background: linear-gradient(-135deg, #acadad, #515755);
+}

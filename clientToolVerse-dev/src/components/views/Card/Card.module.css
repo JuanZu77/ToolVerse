@@ -1,0 +1,135 @@
+.upperDiv {
+  border-radius: 0.5rem;
+  margin: 1.5rem;
+  margin-top: 3.5rem;
+  background: var(--highlights);
+  width: 24rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.name {
+  color: var(--buttons);
+  text-decoration: none;
+  font-size: medium;
+  font-weight: 700;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 0.7rem;
+  padding-right: .5rem;
+  cursor: pointer;
+}
+
+.image {
+  max-width: 97%;
+  border: 0.4rem solid #f4c434;
+  cursor: pointer;
+  background-color: var(--primary);
+}
+
+.block {
+  font-weight: 600;
+}
+
+.brandPrice {
+  background-color: var(--highlights);
+  display: flex;
+  justify-content: space-around;
+  margin-top: -4rem;
+}
+
+.brand {
+  margin: 1rem;
+  background-color: var(--primary);
+  color: var(--buttons);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.price {
+  background-color: var(--primary);
+  color: var(--warnings);
+}
+
+.extra {
+  display: none;
+  font-size: larger;
+  position: absolute;
+  width: 100%;
+}
+
+.upperDiv:hover {
+  overflow: visible;
+  height: auto;
+  z-index: 999;
+  transform: scale(1.2);
+  transition: 3ms;
+  box-shadow: 1px 0px 32px 11px rgba(203, 161, 111, 0.85);
+  -webkit-box-shadow: 1px 0px 32px 11px rgba(203, 161, 111, 0.85);
+  -moz-box-shadow: 1px 0px 32px 11px rgba(203, 161, 111, 0.85);
+}
+
+.upperDiv:hover .extra {
+  display: block;
+  color: var(--buttons);
+  background-color: var(--highlights);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.model {
+  margin-top: 1rem;
+  font-size: smaller;
+  margin-bottom: 0%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.button {
+  height: 4.5rem;
+  margin: 1rem;
+}
+
+.button input {
+  cursor: pointer;
+  background-color: #f4c434;
+  border: none;
+  color: white;
+  padding: 1.4rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0.4rem 0.2rem;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.button input:hover {
+  background-color: white;
+  color: black;
+  border: 0.2rem solid #f4c434;
+}
+
+.button input:focus {
+  background: #bababb;
+}
+
+@media (max-width: 480px) {
+
+  .carrImg,
+  .enunciadoCarrusel {
+    width: 100%
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

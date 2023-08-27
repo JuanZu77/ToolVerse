@@ -1,0 +1,158 @@
+.navBar {
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 9.7rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.toHome,
+.logOn,
+.cartBtn,
+.cartBtnImg,
+.register {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.toHome {
+    height: 9.5rem;
+    width: auto;
+}
+
+.logOnCart {
+    display: flex;
+    align-items: center;
+}
+
+.logOn,
+.register {
+    background-color: var(--buttons);
+    color: var(--primary);
+    border: 0.1rem solid var(--secondary);
+    border-radius: 1rem;
+    height: 4rem;
+    width: 15rem;
+    margin-right: 2rem;
+    text-transform: uppercase;
+}
+
+.logOn:hover,
+.register:hover {
+    border: 0.2rem solid var(--buttons)
+}
+
+.cartBtn,
+.cartBtnImg {
+    background-color: transparent;
+    height: 5rem;
+}
+
+.registerLogOn {
+    margin-left: 2rem;
+}
+
+.searchBar {
+    background-color: var(--primary);
+}
+
+@media (min-width: 816px) {
+    .navBar {
+        margin: auto;
+        max-width: 90vw;
+    }
+
+    .logOnCart {
+        display: flex;
+        justify-content: space-around;
+        margin-right: 13rem;
+    }
+}
+
+@media (max-width: 815px) {
+    .toHome {
+        height: 5.5rem;
+        margin-bottom: 1rem;
+        margin-right: -2.5rem;
+    }
+
+    .navBar {
+        margin-left: -1rem;
+    }
+
+    .cartBtn {
+        height: 5rem;
+        margin-right: 2rem;
+    }
+
+    .cartBtnImg {
+        height: 4rem;
+    }
+
+    .registerLogOn {
+        display: flex;
+        flex-direction: column;
+        margin-left: -2rem;
+        margin-right: -1rem;
+    }
+
+    .register {
+        width: 7rem;
+        font-size: x-small;
+        margin-bottom: 0.5rem;
+    }
+
+    .logOn {
+        width: 7rem;
+        font-size: x-small;
+    }
+}
+
+@media (max-width: 480px) {
+    .navBar {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+
+    .toHome {
+        margin-top: .5rem;
+        height: 6rem;
+        margin-bottom: 1rem;
+    }
+
+    .searchBar {
+        margin-right: 2rem;
+        background-color: var(--primary);
+    }
+
+    .registerLogOn {
+        margin-left: 5.5rem;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .logOn,
+    .register {
+        width: 8rem;
+        align-items: center;
+    }
+
+    .logOnCart {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .cartBtn {
+        height: 4rem;
+    }
+
+    .cartBtnImg {
+        height: 3rem;
+    }
+}

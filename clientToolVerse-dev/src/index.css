@@ -1,0 +1,27 @@
+:root {
+  /* se setean las variables para definir la paleta de colores del proyecto */
+  --primary: #ffffff;
+  --secondary: #f4c434;
+  --highlights: #bababa;
+  --warnings: #914621;
+  --buttons: #000000;
+  --onhover: rgb(13, 73, 13);
+
+  /* PORPUESTA: ayuda a utilizar el rem para una web más dinámica sin usar tanto media query */
+  font-size: 62.5%;
+  /* 1 rem = 10 px */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

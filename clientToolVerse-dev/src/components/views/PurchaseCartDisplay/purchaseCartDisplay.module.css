@@ -1,0 +1,112 @@
+.overallCompra {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.detallesTotal,
+.toPay {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.prodDetails {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    border: 0.1rem solid var(--highlights);
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.imgProd {
+    height: 5rem;
+}
+
+.elige {
+    margin: 3rem;
+}
+
+.buttonPay {
+    border: none;
+    width: 20rem;
+    cursor: pointer;
+    margin-bottom: 3rem;
+}
+
+.checkOutbtn {
+    margin-top: 3rem;
+    width: 30rem;
+    cursor: pointer;
+}
+
+.userDetails,
+.prodDetails {
+    padding: 2rem;
+    border: 0.1rem solid var(--buttons);
+    font-size: medium;
+}
+
+.nameMiniProd {
+    font-size: small;
+    font-weight: 600;
+}
+
+.priceMiniProd {
+    font-size: small;
+    font-weight: 500;
+    color: var(--warnings);
+}
+
+.total {
+    font-size: medium;
+    margin-top: 2rem;
+    color: var(--warnings);
+}
+
+.button {
+    height: 4.5rem;
+    margin: 3.5rem 0;
+}
+
+.button input {
+    height: 100%;
+    width: 35rem;
+    border-radius: 0.5rem;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #acadad, #515755);
+}
+
+.button input:hover {
+    background: linear-gradient(-135deg, #acadad, #515755);
+}
+
+.paymentsMet {
+    display: flex;
+    gap: 38rem
+}
+
+@media (max-width: 816px) {
+
+    .buttonPay,
+    .mercadoPago {
+        width: 30rem;
+        height: auto;
+        margin-bottom: 3rem;
+        background-color: transparent;
+        align-items: center;
+    }
+
+    .checkOutbtn {
+        margin-top: 2rem;
+        width: 25rem;
+    }
+}

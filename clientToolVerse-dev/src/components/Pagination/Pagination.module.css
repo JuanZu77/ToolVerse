@@ -1,0 +1,54 @@
+.divButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--secondary);
+  padding: 10px;
+}
+
+.divButtons button {
+  margin-right: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 3rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 1rem 1.2rem;
+  background-color: var(--buttons);
+  color: var(--primary);
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+  margin: 0 2px;
+}
+
+.button:hover {
+  background-color: var(--highlights);
+  color:var(--buttons);
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 3rem;
+}
+
+.button:disabled {
+  background-color: #dddddd;
+  cursor: not-allowed;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 3rem;
+}
+
+.button.active {
+  background-color: #b1b5b2;
+  color: #000000;
+}

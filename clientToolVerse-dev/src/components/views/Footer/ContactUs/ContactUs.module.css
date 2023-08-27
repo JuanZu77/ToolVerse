@@ -1,0 +1,66 @@
+.formContainer {
+  margin-top: 1rem;
+  width: 90%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f4c434;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+}
+
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  font-size: large;
+  margin-bottom: 1rem;
+}
+
+.formInput,
+.formTextarea {
+  width: 75%;
+  padding: 1rem;
+  font-size: large;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #ccc;
+}
+
+.formSubmit {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: large;
+  width: 25%;
+  align-self: center;
+}
+
+.formSubmit:hover {
+  background: #0056b3;
+}
+
+.homeButton {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.homeButton:hover {
+  background: #5a6268;
+}
+
+label {
+  font-weight: bold;
+}

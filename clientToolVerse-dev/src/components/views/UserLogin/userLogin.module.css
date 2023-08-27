@@ -1,0 +1,60 @@
+.userLogin {
+  position: relative;
+  cursor: pointer;
+}
+
+.UserIcon {
+  width: 8rem;
+  height: 5rem;
+
+}
+
+.UserMenu {
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  width: 15rem;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  z-index: 1;
+}
+
+
+.UserMenu button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.UserMenu button:hover {
+  background-color: #f4c434;
+}
+
+
+.UserMenuAnimation-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.UserMenuAnimation-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.UserMenuAnimation-exit {
+  opacity: 1;
+}
+
+.UserMenuAnimation-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}

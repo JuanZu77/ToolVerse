@@ -1,0 +1,116 @@
+.listContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 30rem;
+}
+
+.dashContainer {
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--primary);
+    position: relative;
+    padding: 1rem;
+  }
+  
+  .secondaryContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+  }
+  
+  .nameContainer {
+    width: 100%; /* Set the width to 100% to take the full width of the parent */
+    display: flex;
+    justify-content: center; /* Horizontally center the content inside nameContainer */
+  }
+  
+  .menuContainer {
+    margin-top: 20px; /* Add some margin to separate nameContainer and menuContainer */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: 5px solid var(--secondary);
+    border-radius: 0.4rem;
+    padding: 1px;
+    width: auto;
+  }
+  
+  .customButton {
+    background-color: var(--buttons);
+    color: var(--primary);
+    padding: 1.5rem 1rem;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  .customButton:hover {
+    background-color: var(--highlights);
+    color: var(--buttons);
+  }
+  
+  .componentContainer {
+    width: 26%;
+    min-height: 0; /* Use min-height instead of height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border: 2rem solid var(--secondary);
+    border-radius: 0.4rem;
+    background-color: var(--primary);
+  }
+  
+  .activeComponent {
+    width: 95%;
+    align-self:baseline;
+  }
+  
+  .secondaryContainer {
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .userProfileContainer {
+      flex-direction: column;
+    }
+  
+    .menuContainer {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-self: flex-start;
+      margin-bottom: 5px;
+    }
+  
+    .componentContainer {
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: auto;
+    }
+    
+    .menuPalabra{
+        padding-top: 2rem;
+        forced-color-adjust: 2rem;
+      }
+  }
+  

@@ -1,0 +1,89 @@
+.divMiniProd {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    border: 0.1rem solid var(--highlights);
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.nameMiniProd {
+    font-size: larger;
+    font-weight: 700;
+}
+
+.priceMiniProd {
+    font-size: larger;
+    font-weight: 700;
+    color: var(--warnings);
+}
+
+.imgMiniProd {
+    height: 8rem;
+    margin-left: -9rem;
+}
+
+.brandModelMini {
+    margin-left: -9rem;
+}
+
+.bin {
+    height: 2rem;
+    margin: -0.5rem;
+    margin-bottom: -0.6rem;
+    cursor: pointer;
+}
+
+.mas,
+.menos {
+    height: 2rem;
+    margin: -0.5rem;
+    margin-bottom: -0.6rem;
+    cursor: pointer;
+    border: none;
+}
+
+.lessQtity,
+.addQtity {
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    background-color: transparent;
+}
+
+.quantMiniProd {
+    font-size: small;
+}
+
+.deleteProd {
+    height: 3rem;
+    width: 3rem;
+    border: 0.2rem solid var(--secondary);
+    background-color: transparent;
+}
+
+.deleteProd:hover {
+    border: 0.2rem solid var(--warnings);
+}
+
+.warning {
+    font-weight: 700;
+    color: var(--warnings);
+}
+
+@media (max-width: 770px) {
+    .divMiniProd {
+        width: 90%;
+        margin-left: 1rem;
+    }
+
+    .imgMiniProd {
+        width: 5rem;
+        height: auto;
+    }
+
+    .brandModelMini {
+        margin-top: 1rem;
+    }
+}

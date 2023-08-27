@@ -1,0 +1,45 @@
+
+.profilecontainer {
+    border: 10px solid var(--highlights);
+    padding: 20px;
+    margin: 20px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+    border-radius: 0.5rem;
+    background-color: var(--primary);
+  }
+
+  .title {
+  padding: 10px;
+  background-color: var(--buttons);
+  width: 100%; /* Asegura que ocupe todo el ancho del .profilecontainer */
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
+  border: 3px solid var(--buttons);
+  border-radius: 0.5rem;
+  color: var(--primary);
+}
+
+  .boton {
+    margin: 3.5rem 0;
+  }
+  
+  .boton {
+    width: 100%; 
+    height: 4.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #acadad, #515755);
+  }
+  
+  .boton:hover {
+    background: linear-gradient(-135deg, #acadad, #515755);
+  }

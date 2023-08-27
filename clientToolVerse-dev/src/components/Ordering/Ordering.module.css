@@ -1,0 +1,55 @@
+.alphabeticalOrder,
+.orderByPrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 0.7rem;
+  align-items: center;
+  color: rgba(0, 0, 0, .9);
+  border: 1px solid var(--secondary);
+  margin-bottom: 1rem;
+  width: 27rem;
+}
+
+.alphabeticalOrder select,
+.orderByPrice select {
+  border: none;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.orderingContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.button {
+  height: 4.5rem;
+  margin: 1rem;
+}
+
+.button input {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: none;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #acadad, #515755);
+}
+
+.button input:hover {
+  background: linear-gradient(-135deg, #acadad, #515755);
+}
+
+.orderTitle {
+  font-size: medium;
+}

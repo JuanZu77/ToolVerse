@@ -1,0 +1,73 @@
+.title {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    margin-top: 0.1rem;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: separate;
+  }
+  
+  .table th,
+  .table td {
+    padding: 0.8rem;
+    border: 1px solid gainsboro;
+    font-size: medium;
+  }
+  
+  .table th {
+    background-color: gainsboro;
+    font-weight: bold;
+  }
+  
+  .table button {
+    margin-right: 0.4rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.4rem;
+    border-radius: 0.4rem;
+    background-color: #007BFF;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+  
+  .table button:hover {
+    background-color: #0056b3;
+  }
+  
+  .actionsHeader {
+    text-align: center;
+  }
+  
+  input,
+  textarea {
+    width: 90%;
+    padding: 0.5rem;
+    font-size: medium;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+  }
+  
+  
+  
+  .button input {
+    height: 100%;
+    max-width: 15%;
+    border-radius: 0.5rem;
+    border: none;
+    color: #fff;
+    font-size: medium;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #acadad, #515755);
+  }
+  
+  .button input:hover {
+    background: linear-gradient(-135deg, #acadad, #515755);
+  }

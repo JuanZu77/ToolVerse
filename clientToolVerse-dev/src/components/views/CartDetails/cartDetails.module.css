@@ -1,0 +1,106 @@
+.emptyTrolley {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.emptyTrolleyImg {
+    height: 25rem;
+}
+
+.goShopping {
+    padding: 1rem;
+    background-color: var(--primary);
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    width: 15rem;
+    border: 0.1rem solid var(--secondary);
+}
+
+.goShopping:hover {
+    border: 0.2rem solid var(--onhover);
+}
+
+.calculate {
+    margin-top: 2rem;
+}
+
+.total {
+    font-size: medium;
+    margin-top: 2rem;
+    color: var(--warnings);
+}
+
+.toPagos {
+    font-size: medium;
+    margin-top: 2rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1 solid var(--highlights);
+    padding: .5rem;
+}
+
+.button {
+    height: 4.5rem;
+    margin: 3.5rem 0;
+}
+
+.button input {
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #acadad, #515755);
+}
+
+.button input:hover {
+    background: linear-gradient(-135deg, #acadad, #515755);
+}
+
+
+.emptyTrolley {
+    border: none;
+    height: 3rem;
+}
+
+.deleteAll {
+    border: 0.2rem solid var(--secondary);
+    background-color: transparent;
+    cursor: pointer;
+    width: 3.5rem;
+    margin-left: 40rem;
+}
+
+.deleteAll:hover {
+    border: 0.2rem solid var(--warnings);
+}
+
+.summingTotal {
+    display: flex;
+    flex-direction: column;
+}
+
+.cartError {
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: small;
+}
+
+.errorAddress {
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: small;
+}
+
+@media (max-width: 770px) {
+    .deleteAll {
+        margin-left: 30rem;
+    }
+}

@@ -1,0 +1,103 @@
+/* Estilos para el contenedor principal */
+.containerFeedback {
+  background: linear-gradient(to bottom, #f4c434, #914621);
+  border: 0.1rem solid #ccc;
+  border-radius: 0.8rem;
+  padding: 2rem;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+/* Estilos para el título */
+.containerFeedback h1 {
+  font-size: 2rem;
+  margin-bottom: 1.6rem;
+  color: #333;
+}
+
+/* Estilos para la lista de detalles de pago */
+.containerFeedback ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilos para cada elemento de la lista */
+.containerFeedback li {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #555;
+}
+
+/* Estilos para el ID de pago */
+.containerFeedback li:first-child {
+  font-weight: bold;
+  color: #000;
+}
+
+/* Estilos para el número de orden */
+.containerFeedback li:last-child {
+  font-weight: bold;
+}
+
+/* Estilos para el estado */
+.containerFeedback li:nth-child(3) {
+  font-weight: bold;
+}
+
+/* Estilos para la forma de pago */
+.containerFeedback li:nth-child(2) {
+  font-weight: bold;
+}
+
+.backHome {
+  padding: 1rem 2rem;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.backHome:hover {
+  background-color: #000000;
+  color: #f4c434
+}
+
+.backHome:focus {
+  outline: none;
+  /* Quitamos el borde al hacer foco en el botón */
+}
+
+.backHome:active {
+  background-color: #004080;
+}
+
+.successPayImg {
+  height: 10rem;
+  width: auto;
+}
+
+.userDetails,
+.shippingDetails,
+.productDetails {
+  font-size: 1.3rem;
+}
+
+.shippingDetails,
+.productDetails {
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.productDetails {
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem
+}

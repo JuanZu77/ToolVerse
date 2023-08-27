@@ -1,0 +1,26 @@
+.filterCategory {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 1.5rem;
+  align-items: center;
+  color: rgba(0, 0, 0, .9);
+}
+
+.filterBrand {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 1.5rem;
+  align-items: center;
+  color: rgba(0, 0, 0, .9);
+}
+
+.filtersContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
