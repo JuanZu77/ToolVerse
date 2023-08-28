@@ -6,7 +6,7 @@ import {
   setCurrentPage,
   intersect,
 } from "../../redux/actions";
-import style from "./Filter.module.css";
+import style from "./Filters.module.css";
 
 const Filters = () => {
   const dispatch = useDispatch();
@@ -26,8 +26,9 @@ const Filters = () => {
 
   return (
     <div className={style.filtersContainer}>
-      <div className={style.filtroCat}>
-        <div className={style.orderTitle}>Filtrar por Categoría</div>
+      
+      <div className={style.ContainerCategoriayMarca}>
+        <div className={style.orderTitle}>Filtrar por Categoría:</div>
         <select onChange={handleCategoryFilterChange}>
           <option value="Eléctricos">Eléctricos</option>
           <option value="Manuales">Manuales</option>
@@ -38,8 +39,8 @@ const Filters = () => {
         </select>
       </div>
 
-      <div className={style.filtroMarca}>
-        <div className={style.orderTitle}> Filtrar por Marca</div>
+      <div className={style.ContainerCategoriayMarca}>
+        <div className={style.orderTitle}> Filtrar por Marca:</div>
         <select onChange={handleBrandFilterChange}>
           <option value="MAKITA">Makita</option>
           <option value="EINHELL">Einhell</option>

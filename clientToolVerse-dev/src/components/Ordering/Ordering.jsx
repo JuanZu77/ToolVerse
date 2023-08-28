@@ -1,4 +1,4 @@
-import style from "./Ordering.module.css";
+import style from "../Ordering/Ordering.module.css";
 import {
   orderByName,
   orderByPrice,
@@ -14,9 +14,8 @@ const Ordering = () => {
   return (
     <div className={style.orderingContainer}>
 
-      <div className={style.ordenamientos}>
-        <div className={style.alphabeticalOrder}>
-          <span className={style.orderTitle}>Ordenar por nombre </span>
+        <div className={style.alphabeticalyByPrice}>
+          <span className={style.orderTitle}>Ordenar por Nombre: </span>
           <select
             name="orderByName"
             onChange={(e) => {
@@ -31,8 +30,9 @@ const Ordering = () => {
             ))}
           </select>
         </div>
-        <div className={style.orderByPrice}>
-          <span className={style.orderTitle}>Ordenar por precio </span>
+
+        <div className={style.alphabeticalyByPrice}>
+          <span className={style.orderTitle}>Ordenar por Precio: </span>
           <select
             name="orderByPrice"
             onChange={(e) => {
@@ -47,7 +47,7 @@ const Ordering = () => {
             ))}
           </select>
         </div>
-      </div>
+
     </div>
   );
 };

@@ -1,26 +1,34 @@
-.filterCategory {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  border-radius: 1.5rem;
-  align-items: center;
-  color: rgba(0, 0, 0, .9);
-}
-
-.filterBrand {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  border-radius: 1.5rem;
-  align-items: center;
-  color: rgba(0, 0, 0, .9);
-}
-
 .filtersContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around; 
   align-items: center;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+/*categoria y marca*/
+.ContainerCategoriayMarca{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 0.7rem;
+  align-items: center;
+  color: rgba(0, 0, 0, .9);
+  border: 1px solid var(--secondary);
+  margin-bottom: 1rem;
+  margin-right: 2rem; 
+  width: 30rem;
+}
+
+.ContainerCategoriayMarca select{
+  border: none;
+  font-size: medium;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.orderTitle {
+    font-size: medium;
+    margin-right: 1rem;
 }

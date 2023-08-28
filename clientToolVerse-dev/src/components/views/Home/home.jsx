@@ -18,15 +18,25 @@ function Home() {
     const dispatch = useDispatch();
 
     return (
-        <div className={style.homeDiv}>
+    <div className={style.homeDiv}>
             <br></br>
-            <Carousel showThumbs={false} autoPlay={true} interval={3000}>
-                <img src="https://belltec.com.co/modules/angarslider/views/img/images/8c410ce5b766ed4fbbeea29cdcaca25b7dcae915_ofertasAGOSTO.jpg" alt="img" />
+            <Carousel 
+            showThumbs={false} 
+            autoPlay
+            infiniteLoop
+            centerMode
+            className={style.carrusel}
+            >
                 <img src="https://tienda.ferrecsa.com.mx/image/cache/catalog/BannerBOS2-1360x425h.png" alt="img" />
+
                 <img src="https://tienda.ferrecsa.com.mx/image/cache/catalog/bannMAKITA1-1360x425h.png" alt="img" />
+
                 <img src="https://tienda.ferrecsa.com.mx/image/cache/catalog/bannDewlt-1360x425h.png" alt="img" />
+
                 <img src="https://tienda.ferrecsa.com.mx/image/cache/catalog/bannpaypal-1360x425h.png" alt="img" />
             </Carousel>
+
+        {/*DIV FILTERS, ORDERS and BUTTON remove filters*/}
             <div className={style.filtOrd}>
                 <Filters />
                 <Ordering />
@@ -37,15 +47,13 @@ function Home() {
                     }} />
                 </div>
             </div>
+
             <ProductCards />
             <hr />
 
             <Footer/>
 
-
-
-
-        </div>
-    )
+    </div>
+  )
 }
 export default Home;
