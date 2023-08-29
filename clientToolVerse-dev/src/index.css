@@ -1,11 +1,11 @@
 :root {
   /* se setean las variables para definir la paleta de colores del proyecto */
   --primary: #ffffff;
-  --secondary: #f4c434;
+  --secondary: #6fc8ee;
   --highlights: #bababa;
-  --warnings: #914621;
+  --warnings: #c63805;
   --buttons: #000000;
-  --onhover: rgb(13, 73, 13);
+  --onhover: rgb(10, 147, 10);
 
   /* PORPUESTA: ayuda a utilizar el rem para una web más dinámica sin usar tanto media query */
   font-size: 62.5%;

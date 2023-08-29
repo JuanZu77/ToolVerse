@@ -38,10 +38,7 @@ const ProductCards = () => {
           <Card key={tool.id} {...tool} />
         ))}
       </div>
-      <div>
-        <Pagination />
       </div>
-    </div>
   );
 };
 

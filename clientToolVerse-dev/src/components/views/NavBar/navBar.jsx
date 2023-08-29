@@ -2,7 +2,7 @@ import React from "react";
 import style from './navBar.module.css';
 import { useNavigate } from 'react-router-dom';
 import UserLogin from "../UserLogin/userLogin";
-import logoHome from './LogoPng.png';
+import logoHome from './LOGO_3_toolverse.png';
 import logoCart from './logoCart.png';
 import SearchBar from '../SearchBar/searchBar';
 

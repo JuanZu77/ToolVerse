@@ -1,8 +1,10 @@
 import style from './searchBar.module.css';
 import { useState } from 'react';
-import lupa from './search.png';
+//import lupa from './search.png';
 import { useDispatch } from 'react-redux';
 import * as actions from '../../../redux/actions';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 export default function SearchBar() {
     const dispatch = useDispatch();
@@ -27,9 +29,12 @@ export default function SearchBar() {
 
     return (
         <div className={style.searchBar}>
-            <input type='search' className={style.input} value={input} onChange={handleSearch} placeholder=' Busca una herramienta por nombre' onKeyDown={handleKeyDown}/>
-            <button className={style.onSearch} onClick={() => onSearch(input)}> <img className={style.lupa} src={lupa} alt="lupa" /> </button>
-            <span> </span>
+            <input type='search' className={style.input} value={input} onChange={handleSearch} placeholder='Buscar productos por nombre' onKeyDown={handleKeyDown}/>
+            <span>|</span>
+            <button className={style.onSearch} onClick={() => onSearch(input)}>
+      <FontAwesomeIcon className={style.lupa} icon={faSearch} />
+    </button>
+            
         </div>
     )
 }

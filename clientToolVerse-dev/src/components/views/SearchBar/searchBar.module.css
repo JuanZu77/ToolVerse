@@ -1,34 +1,58 @@
 .searchBar {
-    border: 1px solid var(--highlights);
-    border-radius: 0.4rem;
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-left: 4rem;
+    height: 4rem;
+    border-radius: 0.25rem;
+ 
     background-color: var(--primary);
+    
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(176, 176, 176, 1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(176, 176, 176, 1);
+    box-shadow: 0px 0px 5px 0px rgba(176, 176, 176, 1);
+
+}
+
+.searchBar span {
+    font-size: 3rem;
+    margin:0.5rem 0rem 0.75rem 0rem ;
+    font-weight: lighter;
+    color: rgb(219, 210, 210);
+}
+
+.searchBar input {
+    align-items: center;
+    height: 3rem;
+    width: 29rem;
+    font-size: medium;
+    margin: 0.5rem;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+.searchBar input::placeholder{
+    font-size: small;
+}
+
+.searchBar input:focus {
+    border: solid 1px black; 
 }
 
 .input,
 .lupa,
-.onSearch,
-.ex {
+.onSearch {
     border: none;
     background-color: transparent;
 }
 
-.lupa,
-.ex {
-    width: 2.5rem;
+.lupa {
+    width: 2rem;
+    margin: 1rem;
     cursor: pointer;
+    color: gray;
 }
 
-.input {
-    width: 29rem;
-    font-size: medium;
-}
 
-.ex {
-    margin-left: -0.8rem;
-}
 
 @media (max-width: 480px) {
 
