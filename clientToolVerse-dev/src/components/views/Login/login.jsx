@@ -65,6 +65,7 @@ function Login() {
   return (
     <div className={styles.container}>
       <div className={styles.title}>Inicia sesión</div>
+      
       <div className={styles.content}>
         <form onSubmit={handleSubmit}>
           <div className={styles["user-details"]}>

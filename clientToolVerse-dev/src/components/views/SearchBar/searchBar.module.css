@@ -57,10 +57,11 @@
 @media (max-width: 480px) {
 
     .searchBar {
-        width: 23rem;
+        width: 30rem;
     }
 
     .input {
-        width: 19.4rem;
+        width: 5rem;
     }
-}
+
+  }

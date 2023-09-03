@@ -1,7 +1,7 @@
 .navBar {
     background-color: var(--secondary);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 9.7rem;
     width: 100%;
@@ -9,18 +9,27 @@
 }
 
 .toHome,
-.logOn,
-.cartBtn,
-.cartBtnImg,
-.register {
+.cartBtn {
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
+.cartBtnIcon {
+    height: 3rem;
+    padding: 3rem;
+}
+
+.lightCartIcon {
+    color: #dddddd; 
+  }
+  
+
 .toHome {
     height: 9.5rem;
     width: auto;
+    margin-left: 6rem;
+    margin-top: 0.3rem;
 }
 
 .logOnCart {
@@ -28,131 +37,89 @@
     align-items: center;
 }
 
-.logOn,
+
 .register {
     background-color: var(--buttons);
-    color: var(--primary);
-    border: 0.1rem solid var(--secondary);
+    color: #dddddd;
+    font-weight: bold;
+    border: 0.2rem solid var(--buttons);
     border-radius: 1rem;
     height: 4rem;
     width: 15rem;
     margin-right: 2rem;
     text-transform: uppercase;
+    transition: all 0.3s ease; /* Agregar una transición para suavizar el cambio */
 }
 
-.logOn:hover,
 .register:hover {
-    border: 0.2rem solid var(--buttons)
-}
-
-.cartBtn,
-.cartBtnImg {
-    background-color: transparent;
-    height: 5rem;
-}
-
-.registerLogOn {
-    margin-left: 2rem;
+     color: var(--secondary); /* Cambiar el color del texto en hover */
 }
 
 .searchBar {
     background-color: var(--primary);
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (min-width: 816px) {
+/* Media queries for responsive design */
+@media screen and (max-width: 1600px) {
     .navBar {
-        margin: auto;
-        max-width: 90vw;
+        justify-content: space-around;
+    }
+
+    .toHome {
+        margin-left: 1rem;
     }
 
     .logOnCart {
-        display: flex;
-        justify-content: space-around;
-        margin-right: 13rem;
+        margin-right: 1rem;
     }
 }
 
-@media (max-width: 815px) {
+@media screen and (max-width: 1100px) {
     .toHome {
-        height: 5.5rem;
-        margin-bottom: 1rem;
-        margin-right: -2.5rem;
-    }
-
-    .navBar {
-        margin-left: -1rem;
-    }
-
-    .cartBtn {
-        height: 5rem;
-        margin-right: 2rem;
-    }
-
-    .cartBtnImg {
-        height: 4rem;
-    }
-
-    .registerLogOn {
-        display: flex;
-        flex-direction: column;
-        margin-left: -2rem;
-        margin-right: -1rem;
-    }
-
-    .register {
-        width: 7rem;
-        font-size: x-small;
-        margin-bottom: 0.5rem;
-    }
-
-    .logOn {
-        width: 7rem;
-        font-size: x-small;
-    }
-}
-
-@media (max-width: 480px) {
-    .navBar {
-        margin-top: 4rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 4rem;
-    }
-
-    .toHome {
-        margin-top: .5rem;
-        height: 6rem;
-        margin-bottom: 1rem;
+        height: 6.5rem;
+        margin-left: 1rem;
+        margin-top: 0.3rem;
     }
 
     .searchBar {
-        margin-right: 2rem;
-        background-color: var(--primary);
+        margin-right: 1rem;
     }
 
-    .registerLogOn {
-        margin-left: 5.5rem;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .logOn,
     .register {
-        width: 8rem;
-        align-items: center;
-    }
-
-    .logOnCart {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        width: 10rem;
+        margin-right: 1rem;
     }
 
     .cartBtn {
-        height: 4rem;
+        margin-right: 1rem;
     }
 
-    .cartBtnImg {
+    .userLogin {
         height: 3rem;
     }
 }
+
+@media screen and (max-width: 800px) {
+    .navBar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .toHome,
+    .searchBar {
+        margin: 1rem 0;
+    }
+
+    .logOnCart {
+               margin-top: 1rem;
+    }
+    
+    .register{
+        margin-left: 7rem;
+    }
+}
+

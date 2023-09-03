@@ -1,7 +1,7 @@
 .container {
   max-width: 40rem;
   width: 100%;
-  background-color: #f4c434;
+  background-color: var(--secondary);
   padding: 2.5rem 3rem;
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -9,6 +9,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 3rem;
+  color: var();
 }
 
 .title {
@@ -36,7 +37,7 @@
 }
 
 .user-details .input-box input {
-  width: 100%; 
+  width: 90%; 
   outline: none;
   font-size: 1.6rem;
   border-radius: 0.5rem;

@@ -32,3 +32,39 @@
     font-size: medium;
     margin-right: 1rem;
 }
+
+@media screen and (max-width: 800px) {
+
+
+  .ContainerCategoriayMarca {
+    width: auto; /* Hacer que el ancho sea automático */
+    margin-right: 0; /* Quitar el margen derecho */
+    margin-bottom: 0.5rem; /* Ajustar el margen inferior */
+  }
+
+  .ContainerCategoriayMarca select {
+    font-size: small; /* Reducir el tamaño de fuente para dispositivos más pequeños */
+  }
+
+  .orderTitle{
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .filtersContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ContainerCategoriayMarca {
+    width: auto; /* Hacer que el ancho sea automático */
+    margin-right: 0; /* Quitar el margen derecho */
+    margin-bottom: 0.5rem; /* Ajustar el margen inferior */
+  }
+
+  .ContainerCategoriayMarca select {
+    font-size:xx-small; /* Reducir el tamaño de fuente para dispositivos más pequeños */
+  }
+}
+

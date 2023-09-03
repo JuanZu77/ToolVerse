@@ -1,26 +1,42 @@
 .userLogin {
-  position: relative;
+  display: flex;
   cursor: pointer;
+  margin-right: 5rem;
+  position: relative; /* Añadir posición relativa al contenedor */
 }
 
 .UserIcon {
-  width: 8rem;
-  height: 5rem;
-
+  width: 3rem;
+  height: 3rem;
+  margin-right: 2rem;
+  color: #dddddd; 
 }
 
+/* Menu desplegable Icono */
 .UserMenu {
   position: absolute;
-  top: 4rem;
-  right: 0;
-  width: 15rem;
+  top: 103%;
+  right: 50%;
+  transform: translateX(40%);
+  width: 8rem;
   background-color: #f9f9f9;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 0.5rem;
   z-index: 1;
+  display: none; /* Ocultar el menú por defecto */
 }
 
+.UserIconLoggedIn {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 2rem;
+  
+}
+
+.userLogin:hover .UserMenu {
+  display: block; /* Mostrar el menú al pasar el cursor sobre el icono */
+}
 
 .UserMenu button {
   display: block;
@@ -33,6 +49,7 @@
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
+
 
 .UserMenu button:hover {
   background-color: #f4c434;

@@ -27,42 +27,47 @@ const About = () => {
       linkedin: "https://www.linkedin.com/in/nicolas-gerardo-palma/",
       flag: arFlag
     },
+
+    {
+      name: "Juan Zubiri",
+      position: "Full Stack Developer",
+      education: "educativas: Instituto Superior Santo Domingo, Academia Henry.",
+      previousEmployment: "Gestión de la producción en IMG Textil SRL",
+      image: "https://ca.slack-edge.com/TPRS7H4PN-U04J3N98T2M-d3527c16c481-192",
+      linkedin: "https://www.linkedin.com/in/juan-zubiri/",
+      flag: arFlag
+    },
+
     {
         name: "Sara Maria Pinzón",
         position: "Full Stack Developer",
         education: "EAN - Profesional en Lenguas Modernas; Academia Henry",
         previousEmployment: "Tutor de Abeka Academy",
         image: "https://ca.slack-edge.com/TPRS7H4PN-U04J87CDNUE-3600b0f3484a-192",
-        linkedinUrl:"https://www.linkedin.com/in/sara-pinzon-01548192/",
+        linkedin:"https://www.linkedin.com/in/sara-pinzon-01548192/",
         flag: colFlag
     },
+
     {
-name: "Cecilia Moroni",
+      name: "Cecilia Moroni",
       position: "Full Stack Developer",
       education: "Facultad de Ciencias Químicas, UCC; Academia Henry",
       previousEmployment: "Bioquímicaw",
       image: "https://ca.slack-edge.com/TPRS7H4PN-U04AVPPM86L-a19469d765bd-512",
-      linkedinUrl: "https://www.linkedin.com/in/cecilia-moroni/",
+      linkedin: "https://www.linkedin.com/in/cecilia-moroni/",
       flag: auFlag
     },
+
     {
       name: "Daniel Alejandro Quintero Carrillo",
       position: "Full Stack Developer",
       education: "Ingeniero Industrial, Academia Henry",
       previousEmployment: "Gerente de Operaciones, Tolder S.A",
       image: "https://ca.slack-edge.com/TPRS7H4PN-U042BPPD04D-c232b318a492-512",
-      linkedinUrl: "https://www.linkedin.com/in/daniel-quintero-8127b5a3/",
+      linkedin: "https://www.linkedin.com/in/daniel-quintero-8127b5a3/",
       flag: arFlag
     },
-    {
-      name: "Juan Zubiri",
-      position: "Full Stack Developer",
-      education: "educativas: EEMPI 8098, Instituto superior santo Domingo, Academia Henry.",
-      previousEmployment: "Gestión de la producción en IMG Textil SRL",
-      image: "https://ca.slack-edge.com/TPRS7H4PN-U04J3N98T2M-d3527c16c481-192",
-      linkedinUrl: "https://www.linkedin.com/in/juan-zubiri/?originalSubdomain=ar",
-      flag: arFlag
-    },
+  
   ];
 
   function sortTeamMembers(teamMembers) {

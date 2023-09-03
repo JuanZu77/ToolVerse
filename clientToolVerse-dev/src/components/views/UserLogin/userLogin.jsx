@@ -1,10 +1,13 @@
-import React, { useState, useRef, /*useEffect*/ } from "react";
+import React, { useState, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 import styles from "./userLogin.module.css";
-import userIcon from "./userLogin.png";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { cerrarSesion } from "../../../redux/actions";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser as faUserThin } from "@fortawesome/free-regular-svg-icons";
 
 export default function UserLogin() {
   const [isUserMenuVisible, setUserMenuVisibility] = useState(false);
@@ -30,21 +33,19 @@ export default function UserLogin() {
     dispatch(cerrarSesion());
   };
 
-  // useEffect(() => {
-  //   if (!isAuthenticated) {
-  //     navigate("/login");
-  //   }
-  // }, [isAuthenticated, navigate]);
-
-  console.log ('userLogin, se envio cierre de sesion, autenticacion es:',isAuthenticated)
-
   return (
     <div
       className={styles.userLogin}
       onMouseEnter={showUserMenu}
       onMouseLeave={hideUserMenu}
-    >      
-      <img src={userIcon} alt="User Icon" className={styles.UserIcon} />
+    >
+      {isAuthenticated ? (
+        // Usuario logueado: mostrar el icono de usuario logueado
+        <FontAwesomeIcon icon={faUser} className={styles.UserIconLoggedIn} />
+      ) : (
+        // Usuario deslogueado: mostrar el icono de usuario deslogueado
+        <FontAwesomeIcon icon={faUserThin} className={styles.UserIcon} />
+      )}
       <CSSTransition
         in={isUserMenuVisible}
         timeout={350}
@@ -53,13 +54,12 @@ export default function UserLogin() {
         nodeRef={userMenuRef}
       >
         <div className={styles.UserMenu} ref={userMenuRef}>
-          {isAuthenticated ? ( 
-            <>            
+          {isAuthenticated ? (
+            <>
               <button onClick={() => handleMenuItemClick("/userProfile")}>Panel de Usuario</button>
               <button onClick={handleLogout}>Cerrar Sesión</button>
             </>
           ) : (
-           
             <>
               <button onClick={() => handleMenuItemClick("/login")}>Cliente</button>
             </>
