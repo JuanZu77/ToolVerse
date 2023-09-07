@@ -60,20 +60,21 @@ export default function PurchaseCartDisplay() {
                                 <div className={style.detallesTotal}>
                                     <div className={style.userDetails}>
                                         <h4>Envío a:</h4>
-                                        <div>Nombre: {actualUser.firstName}</div>
-                                        <div>Apellido: {actualUser.lastName}</div>
-                                        <div>Email: {actualUser.email}</div>
-                                        <div>Teléfono: {actualUser.phone}</div>
+                                        <div><b>Nombre: </b>{actualUser.firstName}</div>
+                                        <div><b>Apellido: </b>{actualUser.lastName}</div>
+                                        <div><b>Email: </b>{actualUser.email}</div>
+                                        <div><b>Teléfono: </b>{actualUser.phone}</div>
+                                        <br></br>
                                         <h4>Dirección postal: </h4>
-                                        <div>País: {selectedAddress.country}</div>
-                                        <div>Estado: {selectedAddress.state}</div>
-                                        <div>Ciudad: {selectedAddress.city}</div>
-                                        <div>Calle: {selectedAddress.address}</div>
-                                        <div>CP: {selectedAddress.postalCode}</div>
+                                        <div><b>País: </b>{selectedAddress.country}</div>
+                                        <div><b>Estado: </b>{selectedAddress.state}</div>
+                                        <div><b>Ciudad: </b>{selectedAddress.city}</div>
+                                        <div><b>Calle: </b>{selectedAddress.address}</div>
+                                        <div><b>CP: </b>{selectedAddress.postalCode}</div>
                                     </div>
 
                                     <div>
-                                        <h2> Producto(s): </h2>
+                                        <h2 className={style.titleProducts}> Producto(s): </h2>
                                         {
                                             trolley.map((product) => {
                                                 return (

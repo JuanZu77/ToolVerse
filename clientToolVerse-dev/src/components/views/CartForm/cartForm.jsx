@@ -238,7 +238,9 @@ export default function CartForm({ cartError, setCartError }) {
                 }
 
                 <div className={style.button}>
-                    <input type="submit" value=" Todos los datos son correctos" onClick={handleSubmit} />
+                    <input type="submit" value=" Todos los datos son correctos" onClick={handleSubmit} 
+                    className={style.goShopping}
+                    />
                 </div>
             </form>
         </div>

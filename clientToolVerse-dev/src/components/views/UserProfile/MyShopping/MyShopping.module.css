@@ -1,35 +1,139 @@
 .purchaseItem {
-  border: 0.625rem solid var(--highlights); /* Equivalente a 10px en muchas configuraciones de navegador */
+
   border-radius: 0.5rem;
   padding: 1rem;
-  margin: 1rem; /* Equivalente a 10px en muchas configuraciones de navegador */
+  margin: 1rem; 
   display: inline-block;
-  width: calc(100% - 2rem); /* Redujimos el margen total al 2rem */
+ 
   box-sizing: border-box;
-  justify-content: center;
-  font-size: 1rem; /* Equivalente a 16px en muchas configuraciones de navegador */
+  justify-content: start;
+  font-size: large; 
   background-color: var(--primary);
 }
 
 .title {
   padding: 1rem;
-  background-color: var(--buttons);
   width: 100%;
+  font-size: large;
   box-sizing: border-box;
-  border: 0.1875rem solid var(--buttons); /* Equivalente a 3px en muchas configuraciones de navegador */
   border-radius: 0.5rem;
   color: var(--primary);
 }
 
-/* Consulta de medios para hacerlo responsive */
-@media (max-width: 768px) {
-  .purchaseItem {
-    width: 100%; /* Cambiamos el ancho al 100% en pantallas pequeñas */
-    margin: 0.5rem; /* Redujimos el margen para pantallas pequeñas */
-  }
+.purchaseTable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Establecer el diseño de la tabla en fijo */
+}
+
+.purchaseTable th,
+.purchaseTable td {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc; 
+  padding: 10px; 
+  text-align: center; 
+  width: 25%; /* Ancho mínimo para todas las columnas */
+  white-space: nowrap; /* Evitar el desbordamiento de texto */
+  overflow: hidden; /* Ocultar contenido que desborde */
+  text-overflow: ellipsis; /* Agregar puntos suspensivos a texto largo */
+}
+
+.purchaseTable th:nth-child(3), /* Selección de la tercera columna (índice 2) */
+.purchaseTable td:nth-child(3) {
+  width: 50%; /* Ancho mayor para la columna de productos */
+}
+
+.purchaseTable th:last-child,
+.purchaseTable td:last-child {
+  border-right: none; /* Eliminar línea derecha en la última columna */
 }
 
 
+@media (max-width: 2200px) {
+  .purchaseItem {
+    width: 98%; 
+    margin: 0.5rem; 
+  }
+  .purchaseTable th,
+  .purchaseTable td {
+    padding: 8px; /* Reducir espaciado interior */
+  }
+}
+
+@media (max-width: 1800px) {
+  .purchaseItem {
+    width: 98%; 
+    margin: 0.5rem; 
+  }
+  .purchaseTable th,
+  .purchaseTable td {
+    padding: 8px; /* Reducir espaciado interior */
+  }
+}
+
+@media (max-width: 1600px) {
+  .purchaseItem {
+    width: 98%; 
+    margin: 0.5rem; 
+  }
+  .purchaseTable th,
+  .purchaseTable td {
+    padding: 6px; /* Reducir espaciado interior */
+    font-size: small;
+  }
+}
+
+@media (max-width:1280px) {
+  .purchaseItem {
+    width: 98%; 
+    margin: 0.5rem; 
+  }
+
+  .purchaseTable th,
+  .purchaseTable td {
+    padding: 4px; 
+    font-size: small;
+  }
+
+  .purchaseTable th:nth-child(3), /* Selección de la tercera columna (índice 2) */
+.purchaseTable td:nth-child(3) {
+  width: 80%; /* Ancho mayor para la columna de productos */
+}
+}
+
+
+@media (max-width: 768px) {
+  .purchaseItem {
+    width: 95%; 
+    margin: 0.5rem; 
+  }
+
+  .purchaseTable th,
+  .purchaseTable td {
+    padding: 2px; 
+    font-size: x-small;
+  }
+}
+
+@media (max-width: 560px) {
+  .purchaseItem {
+    width: 90%; 
+    margin: 0.5rem; 
+  }
+
+  .purchaseTable th,
+  .purchaseTable td {
+    padding: 2px; 
+    font-size: xx-small;
+  }
+
+  .purchaseTable th:nth-child(3), /* Selección de la tercera columna (índice 2) */
+  .purchaseTable td:nth-child(3) {
+    width: 90%; /* Ancho mayor para la columna de productos */
+  
+}
+
+}
 
 
 

@@ -162,7 +162,7 @@ const MyAddress = ({ user }) => {
               <button onClick={handleLoadAddress}>Cargar dirección</button>
             </div>
           ) : (
-            <div>
+            <div className={styles.optionInput}>
               <select
                 name="address"
                 onChange={(e) => handleSelect(e.target.value)}
@@ -178,24 +178,27 @@ const MyAddress = ({ user }) => {
                 ))}
               </select>
               {selectedAddress !== null && (
-                <div>
-                  <h2>Pais: {address[selectedAddress].country}</h2>
-                  <h2>Estado: {address[selectedAddress].state}</h2>
-                  <h2>Ciudad: {address[selectedAddress].city}</h2>
-                  <h2>Dirección: {address[selectedAddress].address}</h2>
-                  <h2>Código Postal: {address[selectedAddress].postalCode}</h2>
-                  <button className={styles.button} onClick={handleModify}>
-                    Modificar dirección
+                <div className={styles.alignAddress}>
+                  <p><b>Pais: </b>{address[selectedAddress].country}</p>
+                  <p><b>Estado: </b>{address[selectedAddress].state}</p>
+                  <p><b>Ciudad: </b>{address[selectedAddress].city}</p>
+                  <p><b>Dirección: </b>{address[selectedAddress].address}</p>
+                  <p><b>Código Postal: </b>{address[selectedAddress].postalCode}</p>
+                  
+                  <button className={styles.buttonModificar} onClick={handleModify}>
+                    Modificar Dirección
                   </button>
                 </div>
               )}
+
               <button className={styles.button} onClick={handleLoadAddress}>
-                Cargar nueva dirección
+                Cargar Nueva Dirección
               </button>
             </div>
           )}
         </div>
       )}
+      
       {active && (
         <MyAddressForm
           handleChange={handleChange}

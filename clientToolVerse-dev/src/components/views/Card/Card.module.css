@@ -2,7 +2,7 @@
   border-radius: 0.5rem;
   margin: 1.5rem;
   margin-top: 3.5rem;
-  background: var(--highlights);
+  background: var(--secondary);
   width: 24rem;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,8 @@
 
 .image {
   max-width: 97%;
-  border: 0.4rem solid #f4c434;
+  border: 0.1rem solid #f4c434;
+  border-radius: 1rem;
   cursor: pointer;
   background-color: var(--primary);
 }
@@ -33,7 +34,7 @@
 }
 
 .brandPrice {
-  background-color: var(--highlights);
+  background-color: var(--secondary);
   display: flex;
   justify-content: space-around;
   margin-top: -4rem;
@@ -72,7 +73,7 @@
 .upperDiv:hover .extra {
   display: block;
   color: var(--buttons);
-  background-color: var(--highlights);
+  background-color: var(--secondary);
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
@@ -84,17 +85,13 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.button {
-  height: 4.5rem;
-  margin: 1rem;
-}
 
-.button input {
+.button input, .deleteProd {
   cursor: pointer;
   background-color: #f4c434;
   border: none;
   color: white;
-  padding: 1.4rem 2rem;
+  padding: 1.3rem 1.5rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -107,7 +104,15 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 100%;
+  width: 90%;
+}
+
+.deleteProd{
+  background: var(--warnings);
+}
+
+.deleteProd:hover{
+  border: 0.1rem solid var(--primary);
 }
 
 .button input:hover {
@@ -119,6 +124,7 @@
 .button input:focus {
   background: #bababb;
 }
+
 
 @media (max-width: 480px) {
 

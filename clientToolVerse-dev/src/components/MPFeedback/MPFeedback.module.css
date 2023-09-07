@@ -1,6 +1,6 @@
 /* Estilos para el contenedor principal */
 .containerFeedback {
-  background: linear-gradient(to bottom, #f4c434, #914621);
+  background: linear-gradient(to bottom, #85d3eb, #2e99ba);
   border: 0.1rem solid #ccc;
   border-radius: 0.8rem;
   padding: 2rem;
@@ -58,12 +58,15 @@
   border-radius: 0.4rem;
   font-size: 1.6rem;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.5s ease;
+  transition: color 1s ease;
+  transition: transform 0.5s ease;
 }
 
 .backHome:hover {
   background-color: #000000;
-  color: #f4c434
+  color:  var(--secondary);
+  transform: scale(1.05);
 }
 
 .backHome:focus {

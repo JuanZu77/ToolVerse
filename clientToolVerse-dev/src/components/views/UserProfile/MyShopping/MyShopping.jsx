@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import styles from "./MyShopping.module.css";
+import style from "./MyShopping.module.css";
 import { useDispatch } from "react-redux";
 import * as actions from "../../../../redux/actions";
 
@@ -10,7 +10,7 @@ const MyShopping = () => {
 
 
   const formatDate = (dateString) => {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const options = { year: 'numeric', month: 'numeric', day: 'numeric' };
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
 
@@ -69,27 +69,45 @@ const MyShopping = () => {
 
   return (
     <div>
-      <div className={styles.title}>
+      <div className={style.title}>
         <h1>Historial de Compras</h1>
       </div>
-      <div className={styles.purchaseContainer}>
+      <div className={style.purchaseContainer}>
         {purchaseHistory.length > 0 ? (
           purchaseHistory.map((purchase) => (
-            <div className={styles.purchaseItem} key={purchase.id}>
-              <p><b>Compra ID: </b> {purchase.orderId}</p>
-              <p><b>Fecha: </b> {purchase.fecha}</p>
-              <p><b>Producto(s): </b></p>
-              {
-                purchase.productos.map((prod) => {
-                  return (
-                    <div>
-                      <p><b>Producto: </b>{prod.name}</p>
-                      <p><b>Cantidad: </b>{prod.quantity}</p>
-                    </div>
-                  )
-                })
-              }
-              <p><b>Total: </b> {purchase.total}</p>
+            <div className={style.purchaseItem} key={purchase.id}>
+              <table className={style.purchaseTable}>
+                <thead>
+                  <tr>
+                    <th>Compra ID</th>
+                    <th>Fecha</th>
+                    <th>Producto(s)</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{purchase.orderId}</td>
+                    <td>{purchase.fecha}</td>
+                    <td>
+                      {purchase.productos.map((prod) => (
+                        <div key={prod.id}>
+                          <p>{prod.name}</p>
+                        </div>
+                      ))}
+                    </td>
+                    <td>
+                      {purchase.productos.map((prod) => (
+                        <div key={prod.id}>
+                          <p>{prod.quantity}</p>
+                        </div>
+                      ))}
+                    </td>
+                    <td>{purchase.total}</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           ))
         ) : (

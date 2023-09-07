@@ -8,9 +8,16 @@
 }
 
 body {
-  background-image: url("https://www.imageshine.in/uploads/gallery/White-elegant-texture-background-style.jpg");
-  background-size: cover; 
-  background-repeat: no-repeat; 
+  /*background-color: rgb(242, 242, 242);*/
+  background: repeating-linear-gradient(
+    45deg,
+    white,
+    white 50px,
+    #e7e7e7 500px,
+    #e7e7e7 60px
+  );
+  background-size: 100% 100%; /* Asegura que el fondo se extienda por toda la página */
+  background-attachment: fixed; /* Fija el fondo para que no se desplace con el contenido */
 }
 
 

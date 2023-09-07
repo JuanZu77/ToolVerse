@@ -1,24 +1,22 @@
 
 .profilecontainer {
-    border: 10px solid var(--highlights);
-    padding: 20px;
-    margin: 20px;
+    padding: 4rem;
+    margin: 4rem;
     max-width: 400px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     line-height: 1.5;
     border-radius: 0.5rem;
     background-color: var(--primary);
+    font-size: large;
   }
 
   .title {
   padding: 10px;
-  background-color: var(--buttons);
-  width: 100%; /* Asegura que ocupe todo el ancho del .profilecontainer */
-  box-sizing: border-box; /* Incluye el padding en el ancho total */
-  border: 3px solid var(--buttons);
-  border-radius: 0.5rem;
+  width: 100%; 
+  font-size:large;
+  box-sizing: border-box; 
   color: var(--primary);
 }
 
@@ -27,7 +25,7 @@
   }
   
   .boton {
-    width: 100%; 
+    width: 50%; 
     height: 4.5rem;
     border-radius: 0.5rem;
     border: none;
@@ -37,9 +35,10 @@
     letter-spacing: 0.1rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    background: linear-gradient(135deg, #acadad, #515755);
+    background: var(--buttons);
   }
   
   .boton:hover {
-    background: linear-gradient(-135deg, #acadad, #515755);
+    background: linear-gradient(-135deg, #525353, #383939);
+    color: var(--secondary);
   }

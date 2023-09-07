@@ -149,7 +149,7 @@ export default function CartDetails({ cartError, setCartError }) {
                 {
                   loading ? <div> <img src={loadingGear} alt='Loading resources' /> </div>
                     : <div className={style.button}>
-                      <input
+                      <input className={style.goShopping}
                         type="submit"
                         value="Continúa con tu compra"
                         onClick={() => continuePurchase()}

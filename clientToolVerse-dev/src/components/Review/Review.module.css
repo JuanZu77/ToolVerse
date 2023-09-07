@@ -1,0 +1,39 @@
+.containerReview{
+    width: 100%;
+}
+
+.containerReview h3{
+    font-size: medium;
+}
+
+.score{
+    width: 2rem;
+    height: 2rem;
+    margin-top: 1rem;
+}
+
+.containerReview textarea{
+    width: 50%;
+    margin-top: 1rem;
+}
+
+.enviarReseña{
+    height: 4rem;
+    width: auto;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    color: #fff;
+    font-size: medium;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: var(--buttons);
+}
+
+.enviarReseña:hover{
+    background: linear-gradient(-135deg, #525353, #383939);
+    color: var(--secondary);
+}

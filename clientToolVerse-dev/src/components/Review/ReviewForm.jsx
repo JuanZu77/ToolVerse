@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as solidStar } from "@fortawesome/free-solid-svg-icons";
 import { faStar as regularStar } from "@fortawesome/free-regular-svg-icons";
 
+import style from './Review.module.css'
+
 const ReviewForm = ({ onSubmitReview }) => {
   //Estado inicial
   const [score, setScore] = useState(0);
@@ -10,9 +12,7 @@ const ReviewForm = ({ onSubmitReview }) => {
 
   //Setear si existe una Review del usuario
   const handleScoreChange = (newScore) => {
-    if (score === 0) {
       setScore(newScore);
-    }
   };
 
   //Enviar la Review siempre y cuando score sea mayor a cero
@@ -26,7 +26,7 @@ const ReviewForm = ({ onSubmitReview }) => {
   };
 
   return (
-    <div>
+    <div className={style.containerReview}>
       <h3>Deja tu reseña:</h3>
 
       <div>
@@ -38,6 +38,7 @@ const ReviewForm = ({ onSubmitReview }) => {
             style={
               { po: "none", cursor: "default" }
             }
+            className={style.score}
           />
         ))}
         ;
@@ -48,7 +49,12 @@ const ReviewForm = ({ onSubmitReview }) => {
         placeholder="Escribe tus comentarios aquí..."
       />
 
-      <button onClick={handleSubmitReview}>Enviar Reseña</button>
+      <br></br>
+      <button onClick={handleSubmitReview}
+      className={style.enviarReseña}
+      >
+        Enviar Reseña
+        </button>
     </div>
   );
 };

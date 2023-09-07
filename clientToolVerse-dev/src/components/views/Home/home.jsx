@@ -49,7 +49,7 @@ function Home() {
             </div>
 
             <ProductCards />
-            <hr />
+            
 
             <Footer/>
 

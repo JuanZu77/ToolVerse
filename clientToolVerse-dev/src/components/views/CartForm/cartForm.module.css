@@ -6,7 +6,7 @@
     background-color: var(--secondary);
     padding: 2.5rem 3rem;
     border-radius: 0.5rem;
-
+    width: fit-content;
 }
 
 .title {
@@ -27,28 +27,27 @@
     height: 2rem;
 }
 
-.button {
-    height: 4.5rem;
-    margin: 1.5rem 0;
-}
-
-.button input {
-    height: 100%;
-    width: 100%;
+.goShopping {
+    padding: 1rem;
+    margin-top:2rem;
+    cursor: pointer;
+    text-transform: uppercase;
     border-radius: 0.5rem;
     border: none;
+    width: auto;
     color: #fff;
-    font-size: 1.4rem;
+    font-size: small;
     font-weight: bold;
-    letter-spacing: 0.1rem;
-    cursor: pointer;
     transition: all 0.3s ease;
-    background: linear-gradient(135deg, #acadad, #515755);
+    background: var(--buttons);
+
 }
 
-.button input:hover {
-    background: linear-gradient(-135deg, #acadad, #515755);
+.goShopping:hover {
+    background: linear-gradient(-135deg, #525353, #383939);
+    color: var(--secondary);
 }
+
 
 @media (max-width: 770px) {
     .cartForm {

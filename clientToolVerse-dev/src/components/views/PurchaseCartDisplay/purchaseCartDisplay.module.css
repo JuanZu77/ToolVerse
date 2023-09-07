@@ -42,11 +42,22 @@
     cursor: pointer;
 }
 
+.titulo{
+    margin-top: 2rem;
+    color: var(--warnings);
+}
+
+.userDetails h4{
+    color: var(--warnings);
+}
+
 .userDetails,
 .prodDetails {
-    padding: 2rem;
+    padding: 4rem;
     border: 0.1rem solid var(--buttons);
+    border-radius: 0.5rem;
     font-size: medium;
+    text-align: left;
 }
 
 .nameMiniProd {
@@ -66,27 +77,25 @@
     color: var(--warnings);
 }
 
-.button {
-    height: 4.5rem;
-    margin: 3.5rem 0;
-}
 
 .button input {
-    height: 100%;
-    width: 35rem;
+    margin-top: 2rem;
+    height: 5rem;
+    width: 23rem;
     border-radius: 0.5rem;
     border: none;
     color: #fff;
-    font-size: 1.8rem;
+    font-size: medium;
     font-weight: bold;
     letter-spacing: 0.1rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    background: linear-gradient(135deg, #acadad, #515755);
+    background: var(--buttons);
 }
 
 .button input:hover {
-    background: linear-gradient(-135deg, #acadad, #515755);
+    background: linear-gradient(-135deg, #525353, #383939);
+    color: var(--secondary);
 }
 
 .paymentsMet {
@@ -94,7 +103,21 @@
     gap: 38rem
 }
 
-@media (max-width: 816px) {
+.titleProducts{
+    margin-top: 2rem;
+}
+
+@media (max-width: 810px) {
+
+    .detallesTotal {
+        flex-direction: column; /* Cambia la dirección de flex a columna */
+        align-items: center; /* Centra los elementos en el eje principal */
+        margin-top: 2rem; /* Ajusta el margen superior */
+    }
+    .userDetails,
+    .prodDetails {
+        padding: 2rem; /* Reduce el espacio de relleno */
+    }
 
     .buttonPay,
     .mercadoPago {

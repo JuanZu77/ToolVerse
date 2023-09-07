@@ -8,18 +8,21 @@
   margin-left: 9rem;
   margin-bottom: 3rem;
 
+  border: 0.1rem solid #f4c434;
+  border-radius: 5px;
+  padding: 2rem;
+  padding-left: 1rem;
+
 }
 
 .datailReview {
-  border: 4rem solid #f4c434;
-  border-radius: 5px;
   padding: 5rem;
   padding-left: 1rem;
 }
 
 .detailContainer img {
-  max-width: 50%;
-  padding-right: 100px;
+  max-width: 40%;
+  padding-right: 5rem;
 }
 
 .infoContainer {
@@ -62,17 +65,119 @@
   border: 2px solid #f4c434;
 }
 
+.buttons, .deleteProd{
+  cursor: pointer;
+  background-color: #f4c434;
+  border: none;
+  color: white;
+  padding: 1.3rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0.4rem 0.2rem;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 90%;
+}
+
+.deleteProd{
+  background: var(--warnings);
+}
+
+.deleteProd:hover{
+  border: 0.1rem solid var(--primary);
+}
+
+.buttons:hover{
+  background-color: white;
+  color: black;
+  border: 0.2rem solid #f4c434;
+}
+
+.buttons:focus {
+  background: #bababb;
+}
+
+.star{
+  width: 2rem;
+  height: 4rem;
+}
+
+.buttonUpdateEditReviews{
+  background-color: var(--buttons);
+  margin-bottom: 2rem;
+  color: #dddddd;
+  font-weight: bold;
+  border: 0.2rem solid var(--buttons);
+  border-radius: 1rem;
+  height: 4rem;
+  width: 14rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease; /* Agregar una transición para suavizar el cambio */
+}
+
+.buttonUpdateEditReviews:hover{
+  border: 1px solid var(--secondary); /* Cambiar el color del texto en hover */
+  transform: scale(1.01);
+}
+
+.buttonCancelReviews{
+
+  background-color: var(--warnings);
+  margin-bottom: 2rem;
+  color: #dddddd;
+  border: none;
+  font-size: small;
+  font-weight: bold;
+  border-radius: 1rem;
+  height: 4rem;
+  width: 14rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.buttonCancelReviews:hover{
+  transform: scale(1.01);
+  border: 1px solid #f4c434
+}
+
+@media (max-width: 1200px) {
+  .detailContainer {
+    max-width: 100%;
+  }
+
+  .detailContainer img {
+    width: 50rem;
+    height: auto;
+    margin-left: 4rem;
+  }
+
+  .infoContainer {
+    font-size: 1.5rem;
+    padding: 4rem;
+    border-radius: 0.5rem;
+    width: 60%;
+    height: fit-content;
+  }
+
+  .infoContainer h1 {
+    font-size: 2rem;
+  }
+}
+
 @media (max-width: 770px) {
   .detailContainer {
     max-width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
-    border: 2rem solid #f4c434;
-    border-radius: 5px;
-    padding: 2rem;
-    padding-left: 1rem;
+
   }
 
   .detailContainer img {
@@ -94,15 +199,5 @@
 
 }
 
-@media (max-width: 390px) {
 
-  .detailContainer img {
-    width: 10rem;
-    margin-left: 6rem;
-  }
 
-  .infoContainer h1 {
-    font-size: 1.5rem;
-  }
-
-}

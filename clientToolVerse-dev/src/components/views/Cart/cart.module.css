@@ -16,7 +16,9 @@
 
 .logOn:hover,
 .register:hover {
-    border: 0.2rem solid var(--buttons)
+    transform: scale(1.1);
+    background: var(--secondary);
+    color: var(--primary);
 }
 
 .noUser {
@@ -26,19 +28,23 @@
 }
 
 .mje {
+    margin-top: 2rem;
     font-size: larger;
     margin-bottom: 2rem;
 }
 
-@media (max-width: 770px) {
+
+
+@media (max-width: 910px) {
     .userDetails {
-        max-width: 97%;
+        width: auto;
         display: flex;
-        gap: 2rem
+        gap: 2rem;
+        margin-left: 5rem;
     }
 }
 
-@media (max-width: 418px) {
+@media (max-width: 910px) {
     .userDetails {
         display: flex;
         flex-direction: column;

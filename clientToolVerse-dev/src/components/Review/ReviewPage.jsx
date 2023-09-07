@@ -20,11 +20,9 @@ const ReviewPage = ({ productId }) => {
   // Obtener el ID del usuario logueado
   const userId = user.id;
 
-  // Obtener la reseña del usuario para este producto (si existe)
   const userReview = reviews.find((review) => review.productId === productId && review.userId === userId);
 
-  // Verificaar si es la primera reseña del usuario para este producto
-  // const isFirstReview = !userReview;
+ 
 
   const handleSubmitReview = (newReview) => {
     dispatch(addReview({ ...newReview, userId, productId }));
@@ -34,12 +32,9 @@ const ReviewPage = ({ productId }) => {
       title: "Información guardada",
       text: "La información ha sido guardada con éxito.",
     });
-    // debería chequear los datos 
+    
   };
 
-  // const handleUpdateComments = (id, comments) => {
-  //   dispatch(updateReviewComments(id, comments));
-  // };
 
   return (
     <div>

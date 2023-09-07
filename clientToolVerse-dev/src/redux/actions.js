@@ -572,10 +572,30 @@ export const addReview = (review) => async (dispatch) => {
   }
 };
 
-export const updateReviewComments = (id, comments) => ({
-  type: UPDATE_REVIEW_COMMENTS,
-  payload: { id, comments },
-});
+export const updateReviewComments = (id, comments) => async (dispatch) => {
+  try {
+    // Realizar la solicitud POST al controlador para actualizar los comentarios
+    const response = await axios.put(`/review/${id}`, { comments });
+
+    // Verificar si la solicitud fue exitosa y despachar la acción correspondiente
+    if (response.status === 200) {
+      dispatch({
+        type: UPDATE_REVIEW_COMMENTS,
+        payload: { id, comments },
+      });
+      // Puedes manejar otras lógicas o acciones aquí si es necesario
+
+      // Devolver una respuesta si es necesario
+      return response.data;
+    } else {
+      // Manejar errores o devolver un mensaje de error si es necesario
+      throw new Error('Error updating review comments');
+    }
+  } catch (error) {
+    // Manejar errores o devolver un mensaje de error si es necesario
+    throw new Error('Error updating review comments');
+  }
+};
 
 export const deleteReview = (id) => ({
   type: DELETE_REVIEW,
@@ -672,6 +692,7 @@ export const getOrders = () => {
     }
   };
 };
+
 export const deleteOrder = (orderId) => {
   return async function (dispatch) {
     try {

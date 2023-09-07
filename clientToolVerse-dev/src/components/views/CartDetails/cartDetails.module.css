@@ -1,25 +1,40 @@
+.emptyTrolley h3{
+
+     font-size: medium;
+}
+
 .emptyTrolley {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .emptyTrolleyImg {
     height: 25rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .goShopping {
     padding: 1rem;
-    background-color: var(--primary);
+    margin-top:2rem;
     cursor: pointer;
     text-transform: uppercase;
-    border-radius: 1rem;
-    width: 15rem;
-    border: 0.1rem solid var(--secondary);
+    border-radius: 0.5rem;
+    border: none;
+    width: auto;
+    color: #fff;
+    font-size: small;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background: var(--buttons);
+
 }
 
 .goShopping:hover {
-    border: 0.2rem solid var(--onhover);
+    background: linear-gradient(-135deg, #525353, #383939);
+    color: var(--secondary);
 }
 
 .calculate {
@@ -40,30 +55,6 @@
     border: 1 solid var(--highlights);
     padding: .5rem;
 }
-
-.button {
-    height: 4.5rem;
-    margin: 3.5rem 0;
-}
-
-.button input {
-    height: 100%;
-    width: 100%;
-    border-radius: 0.5rem;
-    border: none;
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: bold;
-    letter-spacing: 0.1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background: linear-gradient(135deg, #acadad, #515755);
-}
-
-.button input:hover {
-    background: linear-gradient(-135deg, #acadad, #515755);
-}
-
 
 .emptyTrolley {
     border: none;
@@ -99,7 +90,7 @@
     font-size: small;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 910px) {
     .deleteAll {
         margin-left: 30rem;
     }
