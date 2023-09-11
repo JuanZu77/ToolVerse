@@ -1,4 +1,81 @@
-const { PurchaseDetail, Product, PurchaseCart } = require('../db');
+const { PurchaseDetail, Product, PurchaseCart, User } = require('../db');
+
+const getPurchaseDetailsByUserId = async (req, res) => {
+  try {
+    const userId = req.params.userId; // Obtén el ID de usuario logueado desde la URL
+
+    // Busca los detalles de compra correspondientes al usuario
+    const purchaseDetails = await PurchaseDetail.findAll({
+      where: {
+        '$purchaseCart.user.id$': userId, // Accede al id del usuario a través de la relación con PurchaseCart
+      },
+      include: [
+        {
+          model: Product,
+          attributes: ['id'], // Obtén solo el ID del producto
+        },
+        {
+          model: PurchaseCart,
+          include: [
+            {
+              model: User, // Incluye al usuario relacionado con el carrito de compra
+            },
+          ],
+        },
+      ],
+    });
+
+    // Extrae los productId de los detalles de compra
+    const productIdsInPurchaseDetails = purchaseDetails.map(
+      (purchaseDetail) => purchaseDetail.product.id
+    );
+
+    res.json(productIdsInPurchaseDetails);
+    console.log("que sale del res.json", productIdsInPurchaseDetails)
+    
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Error al obtener los detalles de compra.' });
+  }
+};
+
+
+// const getPurchaseDetailsByUserId = async (req, res) => {
+//   try {
+//     const userId = req.params.userId; // Obtén el ID de usuario logueado desde la URL
+
+//     // Busca los detalles de compra correspondientes al usuario
+//     const purchaseDetails = await PurchaseDetail.findAll({
+//       where: {
+//         '$purchaseCart.user.id$': userId, // Accede al id del usuario a través de la relación con PurchaseCart
+//       },
+//       include: [
+//         {
+//           model: Product,
+//         },
+//         {
+//           model: PurchaseCart,
+//           include: [
+//             {
+//               model: User, // Incluye al usuario relacionado con el carrito de compra
+//             },
+//           ],
+//         },
+//       ],
+//     });
+
+//     // Verifica si purchaseDetails es un objeto o un arreglo válido
+//     if (purchaseDetails) {
+//       res.json(purchaseDetails); // Envía la respuesta como JSON válido
+//     } else {
+//       res.status(404).json({ error: 'No se encontraron detalles de compra para este usuario.' });
+//     }
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).json({ error: 'Error al obtener los detalles de compra.' });
+//   }
+// };
+
 
 const getAllPurchaseDetail = async (req, res) => {
   try {
@@ -164,5 +241,6 @@ module.exports = {
   getPurchaseDetailByPurchaseCartId,
   createPurchaseDetail,
   deletePurchaseDetail,
-  updatePurchaseDetail
+  updatePurchaseDetail,
+  getPurchaseDetailsByUserId
 };

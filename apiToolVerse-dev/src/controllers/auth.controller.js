@@ -80,6 +80,7 @@ const login = async (req, res) => {
         firstName: userFound.firstName,
         lastName: userFound.lastName,
         phone: userFound.phone,
+        role:userFound.role,
         token: token // Asegurémonos de incluir el token en la respuesta JSON
       });
     } else {
@@ -105,6 +106,7 @@ const login = async (req, res) => {
         firstName: userFound.firstName,
         lastName: userFound.lastName,
         phone: userFound.phone,
+        role:userFound.role,
         token: token // Asegurémonos de incluir el token en la respuesta JSON
       });
     }
