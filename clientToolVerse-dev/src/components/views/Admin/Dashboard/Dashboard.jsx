@@ -21,7 +21,8 @@ const Dashboard = () => {
     <div className={styles.menuContainer}>
       <div className={styles.dashContainer}>
         <div className={styles.secondaryContainer}>
-          <h3 style={{ paddingTop: "2rem", fontSize: "24px"}}>MENU</h3>
+          <h3>MENU</h3>
+          
           <button
             className={`${styles.customButton} ${
               active === "ListaProductos" ? styles.activeComponent : ""
@@ -30,6 +31,7 @@ const Dashboard = () => {
           >
             Lista de Productos
           </button>
+
           <button
             className={`${styles.customButton} ${
               active === "EditarProductos" ? styles.activeComponent : ""

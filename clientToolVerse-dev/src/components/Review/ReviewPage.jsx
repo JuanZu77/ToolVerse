@@ -20,21 +20,23 @@ const ReviewPage = ({ productId }) => {
   // Obtener el ID del usuario logueado
   const userId = user.id;
 
-  const userReview = reviews.find((review) => review.productId === productId && review.userId === userId);
-
- 
-
-  const handleSubmitReview = (newReview) => {
-    dispatch(addReview({ ...newReview, userId, productId }));
-    // le aviso al usuario que la review fue exitosa
-    Swal.fire({
-      icon: "success",
-      title: "Información guardada",
-      text: "La información ha sido guardada con éxito.",
-    });
-    
+  
+  const handleSubmitReview = async (newReview) => {
+    try {
+      const shouldSubmit = window.confirm("¿Deseas enviar esta reseña?");
+  
+      if (shouldSubmit) {
+        dispatch(addReview({ ...newReview, userId, productId }));
+     
+          window.location.reload();
+        
+      }
+    } catch (error) {
+      console.error("Error al enviar la reseña:", error);
+    }
   };
-
+  
+  const userReview = reviews.find((review) => review.productId === productId && review.userId === userId);
 
   return (
     <div>

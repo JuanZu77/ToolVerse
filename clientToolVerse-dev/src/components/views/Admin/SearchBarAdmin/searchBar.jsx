@@ -26,10 +26,13 @@ export default function SearchBar() {
       };
 
     return (
+
+        <div className={style.SearchContainer}>
         <div className={style.searchBar}>
             <input type='search' className={style.input} value={input} onChange={handleSearch} placeholder=' Busqueda por producto' onKeyDown={handleKeyDown}/>
             <button className={style.onSearch} onClick={() => onSearch(input)}> <img className={style.lupa} src={lupa} alt="lupa" /> </button>
             <span> </span>
+        </div>
         </div>
     )
 }

@@ -23,6 +23,7 @@ const ReviewForm = ({ onSubmitReview }) => {
     } else {
       alert("Por favor, seleccione un puntaje antes de enviar la reseña");
     }
+
   };
 
   return (

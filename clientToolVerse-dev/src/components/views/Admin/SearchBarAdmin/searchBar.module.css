@@ -1,12 +1,37 @@
+.SearchContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .searchBar {
     border: 0.1rem solid var(--highlights);
     border-radius: 0.4rem;
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-left: 4rem;
-    width: 25%;
+    width: 34rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
+}
+
+.searchBar input {
+    align-items: center;
+    height: 3rem;
+    width: 29rem;
+    font-size: medium;
+    margin: 0.5rem;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+.searchBar input::placeholder{
+    font-size: small;
+}
+
+.searchBar input:focus {
+    border: solid 1px black; 
 }
 
 .input,

@@ -179,7 +179,10 @@ export default function CartForm({ cartError, setCartError }) {
                         <div>
                             <h3>No hay direcciones cargadas</h3>
                             <br />
-                            <button onClick={handleLoadAddress}>Cargar dirección</button>
+                            <button onClick={handleLoadAddress}
+                            className={style.goShopping}
+                            >
+                                Cargar dirección</button>
                         </div>
                     ) : (
                         <div>

@@ -36,6 +36,9 @@ const itemsPerPage = 12;
                         dispatch(setCurrentPage(1));
                     }} />
                 </div>
+
+                <Pagination/>
+                
             <table className={styles.table}>
                 <thead>
                     <tr>
@@ -69,7 +72,7 @@ const itemsPerPage = 12;
                     }
                 </tbody>
             </table>
-            <Pagination/>
+            
         </div>
     );
 }

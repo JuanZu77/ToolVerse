@@ -124,7 +124,7 @@
 
 .buttonUpdateEditReviews:hover{
   border: 1px solid var(--secondary); /* Cambiar el color del texto en hover */
-  transform: scale(1.01);
+  color: var(--secondary)
 }
 
 .buttonCancelReviews{
@@ -143,8 +143,8 @@
 }
 
 .buttonCancelReviews:hover{
-  transform: scale(1.01);
-  border: 1px solid #f4c434
+  border: 1px solid #f4c434;
+  color: #f4c434;
 }
 
 @media (max-width: 1200px) {

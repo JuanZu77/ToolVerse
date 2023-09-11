@@ -13,9 +13,9 @@
     letter-spacing: 0.1rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    background: linear-gradient(135deg, #acadad, #515755);
+    background: var(--buttons);
   }
   
   .button:hover input {
-    background: linear-gradient(-135deg, #acadad, #515755);
+   color: var(--secondary)
   }

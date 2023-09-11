@@ -28,6 +28,8 @@ import {persistor} from './redux/store';
 import Order from "./components/views/Admin/Order/Order";
 import PpFeedback from "./components/PpFeedback/PpFeedback";
 import {gapi} from 'gapi-script';
+import ProtectedRoute from "./ProtectedRoute";
+
 
 function App() {
 
@@ -96,24 +98,16 @@ function App() {
 
         <Route path="/purchaseCartDisplay" element={<PurchaseCartDisplay />} />
         <Route path="/feedback" element={<MPFeedback />} />
-        <Route path="/admin" element={<Dashboard />} />
-        <Route path="/admin/productsList" element={<ProductsList />} />
         <Route path="/userprofile" element={<UserProfile />} />
-        <Route path="/createProduct" element={<CreateProduct />} />
-        <Route path="/admin/user" element={<User />} />
-        <Route path="/admin/order" element={<Order />} />
         <Route path="/ppfeedback" element={<PpFeedback/>}/>
 
 
-          <Route path="/admin" element={<Dashboard />} />
-          <Route path="/admin/productsList" element={<ProductsList />} />
-          <Route path="/userprofile" element={<UserProfile />} />
-          <Route path="/createProduct" element={<CreateProduct />} />
-          <Route path="/admin/user" element={<User />} />
-          <Route path="/admin/order" element={<Order />} />
-
-
-        <Route path="/admin/editproducts" element={<EditProducts />} />
+          <Route path='/admin' element={<ProtectedRoute component={Dashboard}/>} />
+          <Route path="/admin/productsList" element={<ProtectedRoute component={ProductsList}/>}  />
+          <Route path="/createProduct" element={<ProtectedRoute component={CreateProduct}/>}  />
+          <Route path="/admin/user" element={<ProtectedRoute component={User}/>}  />
+          <Route path="/admin/order" element={<ProtectedRoute component={Order}/>}  />
+          <Route path="/admin/editproducts" element={<ProtectedRoute component={EditProducts}/>}  />
 
       </Routes>
     </div>

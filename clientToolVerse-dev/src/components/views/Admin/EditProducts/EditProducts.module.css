@@ -53,21 +53,24 @@ textarea {
 }
 
 
-
 .button input {
-  height: 100%;
-  max-width: 15%;
-  border-radius: 0.5rem;
+  background-color: var(--buttons);
+  color: var(--primary);
+  padding: 1.5rem 1rem;
   border: none;
-  color: #fff;
-  font-size: medium;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
+  border-radius: 0.4rem;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
-  background: linear-gradient(135deg, #acadad, #515755);
+  transition: background-color 0.2s ease;
+  width: auto;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .button input:hover {
-  background: linear-gradient(-135deg, #acadad, #515755);
+  background-color: var(--secondary);
+  color: var(--buttons);
 }

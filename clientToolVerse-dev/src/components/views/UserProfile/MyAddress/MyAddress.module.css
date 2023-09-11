@@ -19,7 +19,7 @@
   }
 
  
-  .button, .buttonModificar {
+  .button, .buttonModificar, .buttonCargar{
     padding: 1rem;
     margin-top:2rem;
     margin-left: 1rem;
@@ -40,11 +40,10 @@
   }
 
   .buttonModificar:hover{
-    transform: scale(1.1);
+    border: 1px solid #f4c434;
   }
   
-  .button:hover {
-    background: linear-gradient(-135deg, #525353, #383939);
+  .button:hover, .buttonCargar:hover {
     color: var(--secondary);
   }
 

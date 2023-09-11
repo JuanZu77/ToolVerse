@@ -51,7 +51,6 @@
 }
 
 .customButton:hover {
-  background: linear-gradient(-135deg, #525353, #383939);
   color: var(--secondary);
 }
 

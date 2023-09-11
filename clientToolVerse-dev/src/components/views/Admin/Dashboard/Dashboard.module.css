@@ -1,3 +1,33 @@
+.menuContainer {
+  margin-top: 1rem; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid var(--secondary);
+  border-radius: 0.4rem;
+  padding: 1px;
+  width: auto;
+
+}
+
+.dashContainer {
+  display: flex;
+  background-color: var(--primary);
+  position: relative;
+  margin: 0.5rem 20rem 1rem 1rem;
+  padding: 1rem;
+  background-color: transparent;
+}
+
+
+.secondaryContainer h3{
+  margin-bottom: 1.5rem;
+   font-size: xx-large;
+   text-align: center;
+ }
+ 
+
+
 .listContainer {
     position: relative;
     display: flex;
@@ -7,38 +37,12 @@
     padding-left: 30rem;
 }
 
-.dashContainer {
-    display: flex;
-    align-items: flex-start;
-    background-color: var(--primary);
-    position: relative;
-    padding: 1rem;
-  }
-  
-  .secondaryContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 25%;
-  }
-  
   .nameContainer {
     width: 100%; /* Set the width to 100% to take the full width of the parent */
     display: flex;
     justify-content: center; /* Horizontally center the content inside nameContainer */
   }
   
-  .menuContainer {
-    margin-top: 20px; /* Add some margin to separate nameContainer and menuContainer */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    border: 5px solid var(--secondary);
-    border-radius: 0.4rem;
-    padding: 1px;
-    width: auto;
-  }
   
   .customButton {
     background-color: var(--buttons);
@@ -50,7 +54,7 @@
     margin-bottom: 1rem;
     cursor: pointer;
     transition: background-color 0.2s ease;
-    width: 100%;
+    width: 200px !important;
     text-align: center;
     overflow: hidden;
     white-space: nowrap;
@@ -58,7 +62,7 @@
   }
   
   .customButton:hover {
-    background-color: var(--highlights);
+    background-color: var(--secondary);
     color: var(--buttons);
   }
   
@@ -87,18 +91,44 @@
     align-items: flex-start;
     padding: 1rem;
   }
+
+  @media (max-width: 1600px) {
+    .dashContainer {
+         margin: 0.5rem 10rem 1rem 1rem;
+        }
+  }
+
+  @media (max-width: 1200px) {
+    .dashContainer {
+         margin: 0.5rem 5rem 1rem 1rem;
+        }
+  }
+  
+
   
   @media (max-width: 768px) {
     .userProfileContainer {
       flex-direction: column;
     }
-  
+
+ 
     .menuContainer {
       display: flex;
       flex-direction: row;
       gap: 1rem;
       align-self: flex-start;
       margin-bottom: 5px;
+    }
+
+    .dashContainer {
+      flex-direction: column; /* Cambia la dirección a una columna en dispositivos pequeños */
+      align-items: center; /* Centra los elementos horizontalmente en la columna */
+      margin: 0.5rem 1rem 1rem 1rem; /* Ajusta el margen para dispositivos pequeños */
+    }
+
+    .secondaryContainer {
+      order: -1; /* Cambia el orden del .secondaryContainer para que aparezca arriba */
+      margin-bottom: 1rem;
     }
   
     .componentContainer {

@@ -41,6 +41,7 @@ const Detail = () => {
       );
       if (foundReview) {
         setEditedComments(foundReview.comments);
+
       }
     }
   }, [reviews, id, user]);
@@ -90,6 +91,7 @@ const Detail = () => {
   const handleUpdateComments = () => {
     dispatch(actions.updateReviewComments(findReview.id, editedComments));
     setIsEditingComments(false);
+    window.location.reload();
   };
 
   if (!products) return <div>Esperando carga del producto...</div>;
@@ -172,7 +174,7 @@ const Detail = () => {
           <button
             onClick={() => {
               handleUpdateComments();
-              window.location.reload();
+  
             }}
             className={style.buttonUpdateEditReviews}
           >

@@ -159,7 +159,9 @@ const MyAddress = ({ user }) => {
             <div>
               <h3>No hay direcciones cargadas</h3>
               <br />
-              <button onClick={handleLoadAddress}>Cargar dirección</button>
+              <button onClick={handleLoadAddress}
+              className={styles.buttonCargar}
+              >Cargar dirección</button>
             </div>
           ) : (
             <div className={styles.optionInput}>

@@ -100,10 +100,13 @@ const CreateProduct = () => {
     <div className={styles.divColor}>
       <div>
         <form onSubmit={handlerSubmit} className={styles.formContainer}>
-          <hr />
-          <div>
-            <label className={styles.formLabel} htmlFor="name">Nombre: </label>
-            <input className={styles.formInput}
+          {/* Nombre */}
+          <div className={styles.formGroup}>
+            <label className={styles.formLabel} htmlFor="name">
+              Nombre:
+            </label>
+            <input
+              className={styles.formInput}
               type="text"
               id="name"
               value={product.name}
@@ -112,11 +115,16 @@ const CreateProduct = () => {
               placeholder="Nombre del producto"
               required
             />
+            <span>{error.name ? error.name : " "}</span>
           </div>
-          <span>{error.name ? error.name : " "}</span>
-          <div>
-            <label className={styles.formLabel} htmlFor="brand">Marca: </label>
+  
+          {/* Marca */}
+          <div className={styles.formGroup}>
+            <label className={styles.formLabel} htmlFor="brand">
+              Marca:
+            </label>
             <select
+              className={styles.formSelect}
               name="brand"
               id="brand"
               onChange={handlerProduct}
@@ -133,9 +141,14 @@ const CreateProduct = () => {
             </select>
             <span>{error.brand}</span>
           </div>
-          <div>
-            <label className={styles.formLabel} htmlFor="model">Modelo: </label>
-            <input className={styles.formInput}
+  
+          {/* Modelo */}
+          <div className={styles.formGroup}>
+            <label className={styles.formLabel} htmlFor="model">
+              Modelo:
+            </label>
+            <input
+              className={styles.formInput}
               type="text"
               id="model"
               value={product.model}
@@ -144,11 +157,16 @@ const CreateProduct = () => {
               placeholder="Nombre del Modelo"
               required
             />
+            <span>{error.model}</span>
           </div>
-          <span>{error.model}</span>
-          <div>
-            <label className={styles.formLabel} htmlFor="feature">Características: </label>
-            <input className={styles.formInput}
+  
+          {/* Características */}
+          <div className={styles.formGroup}>
+            <label className={styles.formLabel} htmlFor="feature">
+              Características:
+            </label>
+            <input
+              className={styles.formInput}
               id="feature"
               value={product.feature}
               onChange={handlerProduct}
@@ -157,11 +175,16 @@ const CreateProduct = () => {
               rows={2}
               cols={25}
             />
+            <span>{error.feature}</span>
           </div>
-          <span>{error.feature}</span>
-          <div>
-            <label className={styles.formLabel} htmlFor="detail">Detalle: </label>
-            <input className={styles.formInput}
+  
+          {/* Detalle */}
+          <div className={styles.formGroup}>
+            <label className={styles.formLabel} htmlFor="detail">
+              Detalle:
+            </label>
+            <input
+              className={styles.formInput}
               type="text"
               id="detail"
               value={product.detail}
@@ -169,12 +192,16 @@ const CreateProduct = () => {
               name="detail"
               placeholder="Detalles"
             />
+            <span>{error.detail}</span>
           </div>
-          <span>{error.detail}</span>
-          <div>
-            <label className={styles.formLabel} htmlFor="price">Precio: </label>
-            <input className={styles.formInput}
-          
+  
+          {/* Precio */}
+          <div className={styles.formGroup}>
+            <label className={styles.formLabel} htmlFor="price">
+              Precio ($):
+            </label>
+            <input
+              className={styles.formInput}
               type="number"
               id="price"
               value={product.price?.toLocaleString("en-US", {
@@ -184,44 +211,62 @@ const CreateProduct = () => {
               name="price"
               placeholder="Precio"
             />
-            <span>$</span>
           </div>
-          <span>{error.price}</span>
-          
-          <div style={{ display: 'flex', flexDirection: 'column'}}>
-          <label className={styles.formLabel} htmlFor="image">Sube tu imagen desde donde quieras</label>
-          <input className={styles.formInput} type="text" id="image" name="image" onChange={handlerProduct} value={product.image} hidden />
-          
-          <CloudinaryUploadWidget imageUrl={setProduct} inputs={product}/>
-          <img id="uploadedimage" src="" ref={imageRef} alt=""></img>
-        </div> 
-          
-          <div>
-            <label className={styles.formLabel} htmlFor="category">Categoría:</label>
-            <input className={styles.formInput}
+  
+          {/* Subir imagen */}
+          <div className={styles.formGroup}>
+            <label className={styles.formLabel} htmlFor="image">
+              Sube tu imagen desde donde quieras
+            </label>
+            <input
+              className={styles.formInput}
+              type="text"
+              id="image"
+              name="image"
+              onChange={handlerProduct}
+              value={product.image}
+              hidden
+            />
+            <CloudinaryUploadWidget imageUrl={setProduct} inputs={product} />
+            <img id="uploadedimage" src="" ref={imageRef} alt="" />
+          </div>
+  
+          {/* Categoría */}
+          <div className={styles.formGroup}>
+            <label className={styles.formLabel} htmlFor="category">
+              Categoría:
+            </label>
+            <input
+              className={styles.formInput}
               type="text"
               id="categoryInput"
               value={categoryMap.join(", ")}
               onChange={handlerProduct}
               placeholder="Selecciona Categoria"
             />
-            <select
+            <select className={styles.selectedCategories}
               id="category"
               name="category"
               multiple={true}
               value={product.category}
               onChange={handlerSelect}
             >
-              {categoria.map((e)=> (
-                <option key={e.id} value={e.id}>{e.name}</option>
+              {categoria.map((e) => (
+                <option key={e.id} value={e.id}>
+                  {e.name}
+                </option>
               ))}
             </select>
             <span>{error.category}</span>
           </div>
-          <div>
-            <label className={styles.formLabel} htmlFor="stock">Stock Inicial: </label>
-            <input className={styles.formInput}
-          
+  
+          {/* Stock */}
+          <div className={styles.formGroup}>
+            <label className={styles.formLabel} htmlFor="stock">
+              Stock Inicial:
+            </label>
+            <input
+              className={styles.formInput}
               type="number"
               id="stock"
               value={product.stock}
@@ -229,14 +274,18 @@ const CreateProduct = () => {
               name="stock"
               placeholder="Stock Inicial"
             />
+            <span>{error.stock}</span>
           </div>
-          <span>{error.stock}</span>
-          <button className={styles.formSubmit} type="submit">Crear Producto</button>
-          <hr />
+  
+          {/* Botón de envío */}
+          <button className={styles.formSubmit} type="submit">
+            Crear Producto
+          </button>
         </form>
       </div>
     </div>
   );
+  
 };
 
 export default CreateProduct;

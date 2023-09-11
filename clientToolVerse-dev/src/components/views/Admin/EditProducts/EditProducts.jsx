@@ -96,6 +96,9 @@ const EditProducts = () => {
                         dispatch(setCurrentPage(1));
                     }} />
                 </div>
+
+                <Pagination/>
+
       <table className={styles.table}>
         <thead>
           <tr>
@@ -233,7 +236,7 @@ const EditProducts = () => {
           )}
         </tbody>
       </table>
-      <Pagination/>
+   
     </div>
   );
 };
