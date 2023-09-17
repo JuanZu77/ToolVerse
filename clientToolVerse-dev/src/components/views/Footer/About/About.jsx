@@ -31,7 +31,7 @@ const About = () => {
     {
       name: "Juan Zubiri",
       position: "Full Stack Developer",
-      education: "educativas: Instituto Superior Santo Domingo, Academia Henry.",
+      education: "Instituto Superior Santo Domingo, Instituto de Formación en Cs Empresariales, Academia Henry.",
       previousEmployment: "Gestión de la producción en IMG Textil SRL",
       image: "https://ca.slack-edge.com/TPRS7H4PN-U04J3N98T2M-d3527c16c481-192",
       linkedin: "https://www.linkedin.com/in/juan-zubiri/",
@@ -87,7 +87,9 @@ const About = () => {
 
   return (
     <div className={styles.ourTeamSection}>
-      <h3 className={styles.ourTeamTitle}>Nuestro Equipo</h3>
+
+      <h3 className={styles.ourTeamTitle}>Conoce a Nuestro Equipo:</h3>
+
       <div className={styles.teamMembersContainer}>
         {sortTeamMembers(teamMembers).map((member, index) => (
           <div id={`child-${index}`} onClick={() => member.linkedin && window.open(member.linkedin, '_blank')} key={index} className={styles.teamMember}>

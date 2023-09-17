@@ -3,7 +3,6 @@ import { useState } from "react";
 import styles from "./ContactUs.module.css";
 //import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import backgroundImage from "./fondo.avif"
 import Footer from "../Footer";
 import swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
@@ -38,28 +37,17 @@ export default function ContactUs() {
    .then (navigate("/home"));
   };
 
-  //!Necesito un endpoint para enviar la solicitud del cliente
-  /* const handleSubmit = (e) => {
-    e.preventDefault();
-    axios
-      .post(`http://localhost:3001/email`, {
-        destination: "rojas650634@gmail.com",
-        body: formState.message,
-        title: formState.subject,
-      })
-      .then((d) => {
-        alert("Tu correo ha sido enviado con exito").then(navigate("/home"));
-      })
-      .catch((err) => console.log("ERROR", err));
-  }; */
 
   return (
-    <div style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: "cover", height: "100vh" }}>
-    <h1 style={{fontWeight:"bold", color: "black", fontSize: "xx-large"}}>Tienes alguna consulta o sugerencia, haznoslo saber</h1>
+    <div className={styles.contactContainer}>
       <div className={styles.formContainer}>
         <form onSubmit={handleSubmit} className={styles.contactForm}>
-          <label className={styles.formLabel}>
-            Nombre:
+          <h1>¿Tiene alguna pregunta o sugerencia?</h1>
+  
+          <div className={styles.formField}>
+            <label className={styles.formLabel} htmlFor="firstName">
+              Nombre:
+            </label>
             <input
               type="text"
               name="firstName"
@@ -68,10 +56,12 @@ export default function ContactUs() {
               className={styles.formInput}
               required
             />
-          </label>
-
-          <label className={styles.formLabel}>
-            Apellido:
+          </div>
+  
+          <div className={styles.formField}>
+            <label className={styles.formLabel} htmlFor="lastName">
+              Apellido:
+            </label>
             <input
               type="text"
               name="lastName"
@@ -80,10 +70,12 @@ export default function ContactUs() {
               className={styles.formInput}
               required
             />
-          </label>
-
-          <label className={styles.formLabel}>
-            Email:
+          </div>
+  
+          <div className={styles.formField}>
+            <label className={styles.formLabel} htmlFor="email">
+              Email:
+            </label>
             <input
               type="email"
               name="email"
@@ -92,10 +84,12 @@ export default function ContactUs() {
               className={styles.formInput}
               required
             />
-          </label>
-
-          <label className={styles.formLabel}>
-            Asunto:
+          </div>
+  
+          <div className={styles.formField}>
+            <label className={styles.formLabel} htmlFor="subject">
+              Asunto:
+            </label>
             <input
               type="text"
               name="subject"
@@ -104,10 +98,12 @@ export default function ContactUs() {
               className={styles.formInput}
               required
             />
-          </label>
-
-          <label className={styles.formLabel}>
-            Mensaje:
+          </div>
+  
+          <div className={styles.formField}>
+            <label className={styles.formLabel} htmlFor="message">
+              Mensaje:
+            </label>
             <textarea
               name="message"
               value={formState.message}
@@ -115,12 +111,13 @@ export default function ContactUs() {
               className={styles.formTextarea}
               required
             />
-          </label>
-
+          </div>
+  
           <input type="submit" value="Enviar" className={styles.formSubmit} />
         </form>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
+  
 }

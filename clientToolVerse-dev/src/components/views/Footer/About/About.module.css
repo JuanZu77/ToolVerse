@@ -1,21 +1,24 @@
 .ourTeamSection {
-
-  padding: 5rem 0;
-  background-image: url('../tech.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  padding: 3rem 0;
   height: auto;
 }
 
 .ourTeamTitle {
   text-align: center;
   font-size: 3.6rem;
-  margin-bottom: 2%;
-  color: white;
-  font-weight: bold;
-  margin-top: -4.5rem;
+  color: #f4c434;
+  font-weight: lighter;
+  text-shadow: 2px 2px 4px rgba(82, 81, 81, 0.5);
+  animation: teclear 5s steps(16); 
+}
 
+@keyframes teclear{
+  from {
+      clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+  to{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
 }
 
 .teamMembersContainer {
@@ -24,21 +27,28 @@
   justify-content: center;
 }
 
+
 .teamMember {
   width: 40rem;
   margin: 2rem;
   text-align: left;
-  background: linear-gradient(to bottom right, gray, #f2f2f2, gray, #f2f2f2);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(to bottom right, rgb(0, 0, 0), #6fc8ee, #6fc8ee, gray );
   border-radius: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
-  margin-top: 9%;
+  margin-top: 5%;
   cursor: pointer;
+  transition: all 0.5s ease;
 }
 
 .teamMember:hover {
-  transform: translateY(-5px);
+  transform: translateY(-2px);
+
+  -webkit-box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
+  -moz-box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
+   box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
+  
+  
 }
 
 .memberImage {
@@ -81,4 +91,28 @@
   font-size: 1.6rem;
   color: black;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 1800px) {
+  .teamMember {
+    margin-top: 8%;
+  }
+}
+@media (max-width: 1400px) {
+  .teamMember {
+    margin-top: 9%;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .teamMember {
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 800px) {
+  .teamMember {
+    margin-top: 11%;
+  }
 }

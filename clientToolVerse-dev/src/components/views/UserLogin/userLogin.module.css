@@ -10,6 +10,12 @@
   height: 3rem;
   margin-right: 2rem;
   color: #dddddd; 
+  transition: all 0.5s ease;
+}
+
+.UserIcon:hover{
+  transform: scale(1.12);
+  color: #dbdbdb;
 }
 
 /* Menu desplegable Icono */
@@ -31,7 +37,11 @@
   width: 3rem;
   height: 3rem;
   margin-right: 2rem;
-  
+  transition: all 0.5s ease;
+}
+
+.UserIconLoggedIn:hover{
+  transform: scale();
 }
 
 .userLogin:hover .UserMenu {
