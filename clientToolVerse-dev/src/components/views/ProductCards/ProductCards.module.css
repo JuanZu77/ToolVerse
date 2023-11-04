@@ -13,3 +13,64 @@
   border: 0.5px solid #cccccc;
   border-radius: 2rem;
 }
+
+.filterMessage{
+  font-size: xx-large;
+  margin-top: 10rem;
+  margin-bottom: 15rem;
+}
+
+@media (max-width:2000px){
+  .filterMessage{
+    margin-top: 7rem;
+    margin-bottom: 10rem;
+  }
+}
+
+
+@media (max-width:1800px){
+  .filterMessage{
+    margin-top: 8rem;
+    margin-bottom: 9rem;
+  }
+}
+
+
+@media (max-width:1600px){
+  .filterMessage{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+}
+
+
+@media (max-width:1400px){
+  .filterMessage{
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+  }
+}
+
+
+@media (max-width:1200px){
+  .filterMessage{
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+}
+
+
+@media (max-width:1000px){
+  .filterMessage{
+    margin-top: 14rem;
+    margin-bottom: 14rem;
+  }
+}
+
+
+@media (max-width:800px){
+  .filterMessage{
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+}

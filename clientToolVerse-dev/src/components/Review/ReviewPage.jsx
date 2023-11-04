@@ -1,11 +1,10 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { addReview } from '../../redux/actions';
+import { useSelector} from 'react-redux';
 import ReviewForm from './ReviewForm';
 import Swal from 'sweetalert2';
+import axios from 'axios';
 
 const ReviewPage = ({ productId }) => {
-  const dispatch = useDispatch();
 
   // Acceder a la info del usuario
   const user = useSelector((state) => state.user);
@@ -21,20 +20,50 @@ const ReviewPage = ({ productId }) => {
   const userId = user.id;
 
   
+  // const handleSubmitReview = async (newReview) => {
+  //   try {
+  //     const shouldSubmit = window.confirm("¿Deseas enviar esta reseña?");
+  
+  //     if (shouldSubmit) {
+  //       dispatch(addReview({ ...newReview, userId, productId }));
+     
+  //         window.location.reload();
+        
+  //     }
+  //   } catch (error) {
+  //     console.error("Error al enviar la reseña:", error);
+  //   }
+  // };
+
   const handleSubmitReview = async (newReview) => {
     try {
       const shouldSubmit = window.confirm("¿Deseas enviar esta reseña?");
+      
   
       if (shouldSubmit) {
-        dispatch(addReview({ ...newReview, userId, productId }));
-     
-          window.location.reload();
+        // Envía la reseña
+        // eslint-disable-next-line no-unused-vars
+        const response = await axios.post('/review', { ...newReview, userId, productId });
         
+        // Muestra la alerta de éxito
+        await Swal.fire({
+          icon: "success",
+          title: "Información guardada",
+          text: "La información ha sido guardada con éxito.",
+        });
+  
+        // Después de un breve retraso, recarga la página
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000); // Cambia el valor de 1000 si deseas un retraso diferente
       }
     } catch (error) {
       console.error("Error al enviar la reseña:", error);
     }
   };
+  
+
+
   
   const userReview = reviews.find((review) => review.productId === productId && review.userId === userId);
 

@@ -25,7 +25,7 @@ const ProductCards = () => {
   const toolsToShow = allTools.slice(startIndex, endIndex);
 
   if (toolsToShow.length === 0) {
-    return <div>No hay herramientas para mostrar en esta página.</div>;
+    return <div className={style.filterMessage}>No hay herramientas para mostrar en esta página.</div>;
   }
 
   return (

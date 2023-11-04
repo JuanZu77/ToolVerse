@@ -8,6 +8,7 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 2rem;
+  transition: all 0.5s ease;
 }
 
 .name {
@@ -63,7 +64,7 @@
   overflow: visible;
   height: auto;
   z-index: 999;
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: 3ms;
   box-shadow: 1px 0px 32px 11px rgba(203, 161, 111, 0.85);
   -webkit-box-shadow: 1px 0px 32px 11px rgba(203, 161, 111, 0.85);
@@ -97,7 +98,7 @@
   display: inline-block;
   font-size: 1.3rem;
   margin: 0.4rem 0.2rem;
-  transition-duration: 0.4s;
+  transition-duration: 5s;
   cursor: pointer;
   border-radius: 0.5rem;
   text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
@@ -105,6 +106,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   width: 90%;
+  
 }
 
 .deleteProd{

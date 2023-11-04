@@ -83,3 +83,15 @@
 .footer .contact-us a:hover {
   color: #f4c434;
 }
+
+@media (max-width:700px){
+  .footer .links{
+   font-size: small;
+  }
+}
+
+@media (max-width:500px){
+    .footer .links{
+     font-size: smaller;
+    }
+}

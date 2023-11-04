@@ -1,3 +1,9 @@
+.divColor{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .formContainer {
   margin-top: 1rem;
   width: 100%;

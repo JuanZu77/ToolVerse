@@ -171,6 +171,7 @@ const Detail = () => {
             value={editedComments}
             onChange={(e) => setEditedComments(e.target.value)}
           />
+          <br></br>
           <button
             onClick={() => {
               handleUpdateComments();
@@ -192,6 +193,8 @@ const Detail = () => {
       ) : (
         <div>
           <textarea value={findReview.comments} disabled />
+
+          <br></br>
           <button
             className={style.buttonUpdateEditReviews}
             onClick={() => setIsEditingComments(true)}
